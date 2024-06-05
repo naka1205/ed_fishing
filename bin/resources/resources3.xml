@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://texturepacker.com-->
+<!-- $TexturePacker:SmartUpdate:2d288df3c47eaff22ca61d83b138d08f$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+-->
+<TextureAtlas imagePath="resources3.png" width="1024" height="1024">
+    <sprite n="fish15_00.png" x="426" y="726" w="298" h="140" oX="105" oY="58" oW="512" oH="256"/>
+    <sprite n="fish15_01.png" x="286" y="426" w="140" h="298" oX="105" oY="58" oW="512" oH="256" r="y"/>
+    <sprite n="fish15_02.png" x="144" y="446" w="140" h="300" oX="105" oY="58" oW="512" oH="256" r="y"/>
+    <sprite n="fish15_03.png" x="144" y="144" w="140" h="300" oX="106" oY="58" oW="512" oH="256" r="y"/>
+    <sprite n="fish15_04.png" x="2" y="446" w="140" h="300" oX="106" oY="58" oW="512" oH="256" r="y"/>
+    <sprite n="fish15_05.png" x="2" y="144" w="140" h="300" oX="106" oY="57" oW="512" oH="256" r="y"/>
+    <sprite n="fish15_06.png" x="588" y="144" w="300" h="138" oX="106" oY="59" oW="512" oH="256"/>
+    <sprite n="fish15_07.png" x="286" y="144" w="300" h="138" oX="106" oY="59" oW="512" oH="256"/>
+    <sprite n="fish15_08.png" x="606" y="2" w="300" h="140" oX="106" oY="58" oW="512" oH="256"/>
+    <sprite n="fish15_09.png" x="304" y="2" w="300" h="140" oX="106" oY="58" oW="512" oH="256"/>
+    <sprite n="fish15_10.png" x="586" y="284" w="298" h="140" oX="105" oY="58" oW="512" oH="256"/>
+    <sprite n="fish15_11.png" x="286" y="284" w="298" h="140" oX="105" oY="58" oW="512" oH="256"/>
+    <sprite n="fish15_d00.png" x="2" y="748" w="282" h="142" oX="106" oY="58" oW="512" oH="256"/>
+    <sprite n="fish15_d01.png" x="2" y="2" w="300" h="140" oX="106" oY="57" oW="512" oH="256"/>
+    <sprite n="fish15_d02.png" x="286" y="726" w="138" h="290" oX="107" oY="59" oW="512" oH="256" r="y"/>
+</TextureAtlas>

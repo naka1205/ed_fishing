@@ -1,0 +1,7 @@
+namespace asset {
+#ifdef __EMSCRIPTEN__
+#define RESOURCES_DIR "/resources"
+#else
+#define RESOURCES_DIR "./resources"
+#endif
+}

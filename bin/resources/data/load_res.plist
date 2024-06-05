@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>png</key>
+    <array>
+      <string>resources1.png</string>
+      <string>resources2.png</string>
+      <string>resources3.png</string>
+      <string>ui.png</string>
+      <string>cannon1.png</string>
+      <string>cannon2.png</string>
+      <string>effects.png</string>
+      <string>effects.png</string>
+    </array>
+    <key>Music</key>
+    <array>
+      <string>sound/bgm_music_1.ogg</string>
+      <string>sound/bgm_music_2.ogg</string>
+      <string>sound/bgm_music_3.ogg</string>
+    </array>
+    <key>Chunk</key>
+    <array>
+      <string>sound/change_laser.ogg</string>
+      <string>sound/change_net_gun.wav</string>
+      <string>sound/fishing_net.ogg</string>
+      <string>sound/get_coin.ogg</string>
+      <string>sound/laser_fire.ogg</string>
+      <string>sound/sound_level_up.ogg</string>
+      <string>sound/sound_open_chest.wav</string>
+      <string>sound/sound_shot.wav</string>
+      <string>sound/wave_coming.ogg</string>
+      <string>sound/btn_go.wav</string>
+    </array>
+  </dict>
+</plist>

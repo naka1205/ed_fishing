@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://texturepacker.com-->
+<!-- $TexturePacker:SmartUpdate:842be246c842620bf2ccffeac63e567c$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+-->
+<TextureAtlas imagePath="effects.png" width="512" height="1024">
+    <sprite n="btn_selected_mark00.png" x="101" y="811" w="64" h="64" oX="1" oY="1" oW="66" oH="66"/>
+    <sprite n="btn_selected_mark01.png" x="101" y="745" w="64" h="64" oX="1" oY="1" oW="66" oH="66"/>
+    <sprite n="btn_selected_mark02.png" x="68" y="924" w="64" h="64" oX="1" oY="1" oW="66" oH="66"/>
+    <sprite n="btn_selected_mark03.png" x="2" y="924" w="64" h="64" oX="1" oY="1" oW="66" oH="66"/>
+    <sprite n="chest_light00.png" x="2" y="745" w="97" h="177" oX="0" oY="0" oW="107" oH="187"/>
+    <sprite n="chest_light01.png" x="399" y="461" w="107" h="187"/>
+    <sprite n="chest_light02.png" x="290" y="432" w="107" h="187"/>
+    <sprite n="chest_light03.png" x="346" y="243" w="107" h="187"/>
+    <sprite n="energy_full01.png" x="2" y="672" w="226" h="71" oX="14" oY="2" oW="256" oH="75"/>
+    <sprite n="energy_full02.png" x="230" y="650" w="226" h="71" oX="14" oY="2" oW="256" oH="75"/>
+    <sprite n="energy_full03.png" x="2" y="599" w="226" h="71" oX="14" oY="2" oW="256" oH="75"/>
+    <sprite n="energy_full04.png" x="2" y="449" w="226" h="75" oX="14" oY="0" oW="256" oH="75"/>
+    <sprite n="energy_full05.png" x="2" y="526" w="226" h="71" oX="14" oY="2" oW="256" oH="75"/>
+    <sprite n="gold00.png" x="230" y="449" w="58" h="58" oX="1" oY="0" oW="60" oH="60"/>
+    <sprite n="gold01.png" x="455" y="303" w="54" h="58" oX="1" oY="3" oW="60" oH="60" r="y"/>
+    <sprite n="gold02.png" x="455" y="243" w="54" h="58" oX="1" oY="3" oW="60" oH="60" r="y"/>
+    <sprite n="gold03.png" x="290" y="365" w="38" h="58" oX="0" oY="10" oW="60" oH="60" r="y"/>
+    <sprite n="gold04.png" x="455" y="401" w="38" h="58" oX="0" oY="10" oW="60" oH="60" r="y"/>
+    <sprite n="group_coming.png" x="2" y="243" w="342" h="120"/>
+    <sprite n="level_up.png" x="2" y="365" w="286" h="82"/>
+    <sprite n="prizenum.png" x="2" y="193" w="476" h="48" oX="3" oY="0" oW="480" oH="48"/>
+    <sprite n="prizesign.png" x="455" y="363" w="40" h="36"/>
+    <sprite n="wave.png" x="2" y="2" w="480" h="189" oX="0" oY="0" oW="193" oH="480" r="y"/>
+</TextureAtlas>

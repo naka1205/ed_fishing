@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://texturepacker.com-->
+<!-- $TexturePacker:SmartUpdate:79f3195fec221d61c7c1e4145ae59888$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+-->
+<TextureAtlas imagePath="resources1.png" width="1024" height="1024">
+    <sprite n="fish01_00.png" x="893" y="466" w="70" h="24" oX="29" oY="4" oW="128" oH="32"/>
+    <sprite n="fish01_01.png" x="821" y="466" w="70" h="24" oX="29" oY="4" oW="128" oH="32"/>
+    <sprite n="fish01_02.png" x="465" y="762" w="70" h="24" oX="29" oY="4" oW="128" oH="32"/>
+    <sprite n="fish01_03.png" x="393" y="762" w="70" h="24" oX="29" oY="4" oW="128" oH="32"/>
+    <sprite n="fish01_04.png" x="1000" y="106" w="22" h="70" oX="29" oY="6" oW="128" oH="32" r="y"/>
+    <sprite n="fish01_05.png" x="321" y="762" w="70" h="24" oX="29" oY="4" oW="128" oH="32"/>
+    <sprite n="fish01_d00.png" x="474" y="191" w="28" h="74" oX="26" oY="2" oW="128" oH="32" r="y"/>
+    <sprite n="fish01_d01.png" x="295" y="261" w="26" h="74" oX="27" oY="3" oW="128" oH="32" r="y"/>
+    <sprite n="fish02_00.png" x="899" y="492" w="24" h="52" oX="5" oY="4" oW="64" oH="32" r="y"/>
+    <sprite n="fish02_01.png" x="873" y="492" w="24" h="54" oX="4" oY="4" oW="64" oH="32" r="y"/>
+    <sprite n="fish02_02.png" x="847" y="492" w="24" h="54" oX="5" oY="4" oW="64" oH="32" r="y"/>
+    <sprite n="fish02_03.png" x="821" y="492" w="24" h="54" oX="5" oY="4" oW="64" oH="32" r="y"/>
+    <sprite n="fish02_04.png" x="821" y="492" w="24" h="54" oX="5" oY="4" oW="64" oH="32" r="y"/>
+    <sprite n="fish02_05.png" x="847" y="492" w="24" h="54" oX="5" oY="4" oW="64" oH="32" r="y"/>
+    <sprite n="fish02_06.png" x="873" y="492" w="24" h="54" oX="4" oY="4" oW="64" oH="32" r="y"/>
+    <sprite n="fish02_07.png" x="899" y="492" w="24" h="52" oX="5" oY="4" oW="64" oH="32" r="y"/>
+    <sprite n="fish02_d00.png" x="928" y="662" w="48" h="28" oX="5" oY="2" oW="64" oH="32"/>
+    <sprite n="fish02_d01.png" x="655" y="548" w="54" h="28" oX="5" oY="2" oW="64" oH="32"/>
+    <sprite n="fish03_00.png" x="978" y="632" w="20" h="48" oX="1" oY="13" oW="50" oH="48" r="y"/>
+    <sprite n="fish03_01.png" x="948" y="610" w="50" h="20" oX="0" oY="12" oW="50" oH="48"/>
+    <sprite n="fish03_02.png" x="948" y="588" w="50" h="20" oX="0" oY="12" oW="50" oH="48"/>
+    <sprite n="fish03_03.png" x="1002" y="54" w="20" h="50" oX="0" oY="11" oW="50" oH="48" r="y"/>
+    <sprite n="fish03_04.png" x="1002" y="2" w="20" h="50" oX="0" oY="11" oW="50" oH="48" r="y"/>
+    <sprite n="fish03_05.png" x="218" y="707" w="22" h="50" oX="0" oY="9" oW="50" oH="48" r="y"/>
+    <sprite n="fish03_06.png" x="445" y="338" w="22" h="46" oX="1" oY="9" oW="50" oH="48" r="y"/>
+    <sprite n="fish03_07.png" x="978" y="682" w="44" h="22" oX="1" oY="10" oW="50" oH="48"/>
+    <sprite n="fish03_08.png" x="1000" y="588" w="22" h="44" oX="0" oY="10" oW="50" oH="48" r="y"/>
+    <sprite n="fish03_09.png" x="1000" y="634" w="20" h="46" oX="0" oY="12" oW="50" oH="48" r="y"/>
+    <sprite n="fish03_d00.png" x="928" y="632" w="48" h="28" oX="1" oY="7" oW="50" oH="48"/>
+    <sprite n="fish03_d01.png" x="927" y="692" w="42" h="26" oX="2" oY="10" oW="50" oH="48"/>
+    <sprite n="fish04_00.png" x="803" y="625" w="23" h="55" oX="0" oY="16" oW="55" oH="55" r="y"/>
+    <sprite n="fish04_01.png" x="874" y="624" w="21" h="55" oX="0" oY="17" oW="55" oH="55" r="y"/>
+    <sprite n="fish04_02.png" x="851" y="624" w="21" h="55" oX="0" oY="17" oW="55" oH="55" r="y"/>
+    <sprite n="fish04_03.png" x="828" y="625" w="21" h="55" oX="0" oY="17" oW="55" oH="55" r="y"/>
+    <sprite n="fish04_04.png" x="97" y="800" w="23" h="55" oX="0" oY="16" oW="55" oH="55" r="y"/>
+    <sprite n="fish04_05.png" x="217" y="759" w="23" h="55" oX="0" oY="16" oW="55" oH="55" r="y"/>
+    <sprite n="fish04_06.png" x="776" y="625" w="25" h="55" oX="0" oY="15" oW="55" oH="55" r="y"/>
+    <sprite n="fish04_07.png" x="749" y="626" w="25" h="55" oX="0" oY="15" oW="55" oH="55" r="y"/>
+    <sprite n="fish04_08.png" x="722" y="626" w="25" h="55" oX="0" oY="15" oW="55" oH="55" r="y"/>
+    <sprite n="fish04_09.png" x="695" y="626" w="25" h="55" oX="0" oY="15" oW="55" oH="55" r="y"/>
+    <sprite n="fish04_d00.png" x="897" y="624" w="29" h="53" oX="1" oY="13" oW="55" oH="55" r="y"/>
+    <sprite n="fish04_d01.png" x="664" y="626" w="29" h="55" oX="0" oY="13" oW="55" oH="55" r="y"/>
+    <sprite n="fish05_00.png" x="504" y="460" w="120" h="50" oX="3" oY="6" oW="128" oH="64"/>
+    <sprite n="fish05_01.png" x="504" y="408" w="120" h="50" oX="4" oY="6" oW="128" oH="64"/>
+    <sprite n="fish05_02.png" x="323" y="444" w="120" h="50" oX="3" oY="6" oW="128" oH="64"/>
+    <sprite n="fish05_03.png" x="2" y="673" w="118" h="50" oX="4" oY="6" oW="128" oH="64"/>
+    <sprite n="fish05_04.png" x="122" y="655" w="118" h="50" oX="4" oY="6" oW="128" oH="64"/>
+    <sprite n="fish05_05.png" x="2" y="621" w="118" h="50" oX="3" oY="6" oW="128" oH="64"/>
+    <sprite n="fish05_06.png" x="122" y="603" w="118" h="50" oX="3" oY="6" oW="128" oH="64"/>
+    <sprite n="fish05_07.png" x="2" y="569" w="118" h="50" oX="4" oY="6" oW="128" oH="64"/>
+    <sprite n="fish05_08.png" x="128" y="551" w="118" h="50" oX="4" oY="6" oW="128" oH="64"/>
+    <sprite n="fish05_09.png" x="322" y="548" w="118" h="50" oX="4" oY="6" oW="128" oH="64"/>
+    <sprite n="fish05_10.png" x="323" y="496" w="118" h="50" oX="4" oY="6" oW="128" oH="64"/>
+    <sprite n="fish05_11.png" x="323" y="392" w="120" h="50" oX="3" oY="6" oW="128" oH="64"/>
+    <sprite n="fish05_a00.png" x="323" y="338" w="120" h="52" oX="4" oY="5" oW="128" oH="64"/>
+    <sprite n="fish05_a01.png" x="503" y="512" w="114" h="54" oX="6" oY="3" oW="128" oH="64"/>
+    <sprite n="fish05_a02.png" x="503" y="568" w="112" h="56" oX="6" oY="2" oW="128" oH="64"/>
+    <sprite n="fish05_a03.png" x="655" y="488" w="114" h="58" oX="5" oY="3" oW="128" oH="64"/>
+    <sprite n="fish05_a04.png" x="445" y="480" w="56" h="114" oX="6" oY="4" oW="128" oH="64" r="y"/>
+    <sprite n="fish05_a05.png" x="655" y="436" w="116" h="50" oX="5" oY="5" oW="128" oH="64"/>
+    <sprite n="fish05_d00.png" x="2" y="517" w="124" h="50" oX="1" oY="7" oW="128" oH="64"/>
+    <sprite n="fish05_d01.png" x="321" y="600" w="110" h="50" oX="2" oY="7" oW="128" oH="64"/>
+    <sprite n="fish05_d02.png" x="365" y="866" w="50" h="92" oX="2" oY="7" oW="128" oH="64" r="y"/>
+    <sprite n="fish06_00.png" x="586" y="956" w="36" h="58" oX="1" oY="12" oW="60" oH="60" r="y"/>
+    <sprite n="fish06_01.png" x="282" y="522" w="38" h="60" oX="0" oY="11" oW="60" oH="60" r="y"/>
+    <sprite n="fish06_02.png" x="548" y="957" w="36" h="58" oX="1" oY="12" oW="60" oH="60" r="y"/>
+    <sprite n="fish06_03.png" x="613" y="688" w="34" h="58" oX="0" oY="12" oW="60" oH="60" r="y"/>
+    <sprite n="fish06_04.png" x="992" y="178" w="30" h="58" oX="1" oY="13" oW="60" oH="60" r="y"/>
+    <sprite n="fish06_05.png" x="474" y="327" w="28" h="58" oX="1" oY="14" oW="60" oH="60" r="y"/>
+    <sprite n="fish06_06.png" x="474" y="267" w="28" h="58" oX="1" oY="15" oW="60" oH="60" r="y"/>
+    <sprite n="fish06_07.png" x="507" y="727" w="56" h="30" oX="1" oY="14" oW="60" oH="60"/>
+    <sprite n="fish06_08.png" x="248" y="551" w="32" h="56" oX="1" oY="13" oW="60" oH="60" r="y"/>
+    <sprite n="fish06_09.png" x="626" y="626" w="36" h="56" oX="1" oY="11" oW="60" oH="60" r="y"/>
+    <sprite n="fish06_d00.png" x="242" y="788" w="54" h="30" oX="2" oY="16" oW="60" oH="60"/>
+    <sprite n="fish06_d01.png" x="532" y="692" w="50" h="30" oX="2" oY="17" oW="60" oH="60"/>
+    <sprite n="fish07_00.png" x="900" y="679" w="25" h="73" oX="0" oY="24" oW="73" oH="73" r="y"/>
+    <sprite n="fish07_01.png" x="97" y="725" w="23" h="73" oX="0" oY="25" oW="73" oH="73" r="y"/>
+    <sprite n="fish07_02.png" x="948" y="565" w="73" h="21" oX="0" oY="26" oW="73" oH="73"/>
+    <sprite n="fish07_03.png" x="948" y="542" w="73" h="21" oX="0" oY="25" oW="73" oH="73"/>
+    <sprite n="fish07_04.png" x="925" y="542" w="21" h="73" oX="0" oY="25" oW="73" oH="73" r="y"/>
+    <sprite n="fish07_05.png" x="417" y="652" w="23" h="73" oX="0" oY="25" oW="73" oH="73" r="y"/>
+    <sprite n="fish07_06.png" x="898" y="548" w="25" h="73" oX="0" oY="24" oW="73" oH="73" r="y"/>
+    <sprite n="fish07_07.png" x="871" y="681" w="27" h="73" oX="0" oY="22" oW="73" oH="73" r="y"/>
+    <sprite n="fish07_08.png" x="842" y="682" w="27" h="73" oX="0" oY="23" oW="73" oH="73" r="y"/>
+    <sprite n="fish07_09.png" x="537" y="759" w="73" h="27" oX="0" oY="22" oW="73" oH="73"/>
+    <sprite n="fish07_d00.png" x="584" y="688" w="27" h="69" oX="2" oY="22" oW="73" oH="73" r="y"/>
+    <sprite n="fish07_d01.png" x="626" y="503" w="27" h="73" oX="0" oY="22" oW="73" oH="73" r="y"/>
+    <sprite n="fish08_00.png" x="417" y="866" w="41" h="90" oX="0" oY="21" oW="94" oH="81" r="y"/>
+    <sprite n="fish08_01.png" x="982" y="238" w="39" h="90" oX="1" oY="23" oW="94" oH="81" r="y"/>
+    <sprite n="fish08_02.png" x="242" y="609" w="37" h="88" oX="0" oY="24" oW="94" oH="81" r="y"/>
+    <sprite n="fish08_03.png" x="210" y="827" w="86" h="37" oX="0" oY="23" oW="94" oH="81"/>
+    <sprite n="fish08_04.png" x="780" y="759" w="35" h="86" oX="1" oY="24" oW="94" oH="81" r="y"/>
+    <sprite n="fish08_05.png" x="442" y="692" w="88" h="33" oX="0" oY="25" oW="94" oH="81"/>
+    <sprite n="fish08_06.png" x="417" y="727" w="88" h="33" oX="1" oY="25" oW="94" oH="81"/>
+    <sprite n="fish08_07.png" x="580" y="866" w="35" h="88" oX="0" oY="24" oW="94" oH="81" r="y"/>
+    <sprite n="fish08_08.png" x="122" y="827" w="86" h="37" oX="1" oY="23" oW="94" oH="81"/>
+    <sprite n="fish08_09.png" x="282" y="432" w="39" h="88" oX="1" oY="22" oW="94" oH="81" r="y"/>
+    <sprite n="fish08_d00.png" x="979" y="330" w="43" h="84" oX="4" oY="18" oW="94" oH="81" r="y"/>
+    <sprite n="fish08_d01.png" x="979" y="416" w="43" h="74" oX="5" oY="20" oW="94" oH="81" r="y"/>
+    <sprite n="fish09_00.png" x="460" y="866" w="63" h="89" oX="1" oY="21" oW="99" oH="103" r="y"/>
+    <sprite n="fish09_01.png" x="242" y="699" w="77" h="87" oX="3" oY="15" oW="99" oH="103" r="y"/>
+    <sprite n="fish09_02.png" x="612" y="759" w="85" h="87" oX="3" oY="10" oW="99" oH="103" r="y"/>
+    <sprite n="fish09_03.png" x="649" y="684" w="85" h="73" oX="5" oY="17" oW="99" oH="103"/>
+    <sprite n="fish09_04.png" x="705" y="937" w="77" h="85" oX="5" oY="15" oW="99" oH="103" r="y"/>
+    <sprite n="fish09_05.png" x="617" y="848" w="81" h="87" oX="3" oY="14" oW="99" oH="103" r="y"/>
+    <sprite n="fish09_06.png" x="333" y="960" w="89" h="61" oX="1" oY="24" oW="99" oH="103"/>
+    <sprite n="fish09_07.png" x="525" y="866" w="53" h="89" oX="1" oY="27" oW="99" oH="103" r="y"/>
+    <sprite n="fish09_08.png" x="525" y="866" w="53" h="89" oX="1" oY="27" oW="99" oH="103" r="y"/>
+    <sprite n="fish09_09.png" x="525" y="866" w="53" h="89" oX="1" oY="27" oW="99" oH="103" r="y"/>
+    <sprite n="fish09_10.png" x="525" y="866" w="53" h="89" oX="1" oY="27" oW="99" oH="103" r="y"/>
+    <sprite n="fish09_11.png" x="525" y="866" w="53" h="89" oX="1" oY="27" oW="99" oH="103" r="y"/>
+    <sprite n="fish09_12.png" x="525" y="866" w="53" h="89" oX="1" oY="27" oW="99" oH="103" r="y"/>
+    <sprite n="fish09_13.png" x="525" y="866" w="53" h="89" oX="1" oY="27" oW="99" oH="103" r="y"/>
+    <sprite n="fish09_14.png" x="445" y="387" w="57" h="91" oX="0" oY="24" oW="99" oH="103" r="y"/>
+    <sprite n="fish09_15.png" x="134" y="961" w="89" h="61" oX="1" oY="22" oW="99" oH="103"/>
+    <sprite n="fish09_d00.png" x="761" y="548" w="85" h="75" oX="3" oY="16" oW="99" oH="103"/>
+    <sprite n="fish09_d01.png" x="700" y="848" w="79" h="87" oX="3" oY="15" oW="99" oH="103" r="y"/>
+    <sprite n="fish09_d02.png" x="624" y="937" w="79" h="85" oX="5" oY="16" oW="99" oH="103" r="y"/>
+    <sprite n="fish09_d03.png" x="699" y="759" w="79" h="87" oX="3" oY="15" oW="99" oH="103" r="y"/>
+    <sprite n="fish10_00.png" x="670" y="58" w="160" h="64" oX="12" oY="40" oW="180" oH="140"/>
+    <sprite n="fish10_01.png" x="665" y="124" w="158" h="68" oX="16" oY="36" oW="180" oH="140"/>
+    <sprite n="fish10_02.png" x="832" y="114" w="158" h="72" oX="16" oY="31" oW="180" oH="140"/>
+    <sprite n="fish10_03.png" x="338" y="2" w="164" h="64" oX="9" oY="38" oW="180" oH="140"/>
+    <sprite n="fish10_04.png" x="170" y="2" w="166" h="54" oX="6" oY="47" oW="180" oH="140"/>
+    <sprite n="fish10_05.png" x="2" y="2" w="166" h="54" oX="6" oY="47" oW="180" oH="140"/>
+    <sprite n="fish10_06.png" x="670" y="2" w="164" h="54" oX="8" oY="47" oW="180" oH="140"/>
+    <sprite n="fish10_07.png" x="836" y="56" w="162" h="56" oX="8" oY="46" oW="180" oH="140"/>
+    <sprite n="fish10_08.png" x="168" y="58" w="164" h="58" oX="6" oY="45" oW="180" oH="140"/>
+    <sprite n="fish10_09.png" x="2" y="58" w="164" h="60" oX="7" oY="44" oW="180" oH="140"/>
+    <sprite n="fish10_d00.png" x="504" y="2" w="164" h="56" oX="8" oY="47" oW="180" oH="140"/>
+    <sprite n="fish10_d01.png" x="504" y="342" w="146" h="64" oX="11" oY="39" oW="180" oH="140"/>
+    <sprite n="fish10_d02.png" x="836" y="2" w="164" h="52" oX="8" oY="47" oW="180" oH="140"/>
+    <sprite n="fish10_d03.png" x="149" y="261" w="144" h="54" oX="12" oY="48" oW="180" oH="140"/>
+    <sprite n="fish11_00.png" x="504" y="199" w="149" h="141" oX="3" oY="28" oW="173" oH="205" r="y"/>
+    <sprite n="fish11_01.png" x="2" y="261" w="145" h="137" oX="5" oY="30" oW="173" oH="205" r="y"/>
+    <sprite n="fish11_02.png" x="143" y="414" w="137" h="135" oX="7" oY="35" oW="173" oH="205" r="y"/>
+    <sprite n="fish11_03.png" x="2" y="400" w="139" h="115" oX="8" oY="46" oW="173" oH="205"/>
+    <sprite n="fish11_04.png" x="149" y="317" w="143" h="95" oX="9" oY="56" oW="173" oH="205"/>
+    <sprite n="fish11_05.png" x="655" y="331" w="147" h="103" oX="8" oY="53" oW="173" oH="205"/>
+    <sprite n="fish11_06.png" x="334" y="68" w="155" h="121" oX="7" oY="44" oW="173" oH="205"/>
+    <sprite n="fish11_07.png" x="822" y="329" w="155" h="135" oX="4" oY="37" oW="173" oH="205"/>
+    <sprite n="fish11_08.png" x="323" y="191" w="149" h="145" oX="4" oY="32" oW="173" oH="205"/>
+    <sprite n="fish11_09.png" x="168" y="118" w="153" h="141" oX="4" oY="27" oW="173" oH="205" r="y"/>
+    <sprite n="fish11_d00.png" x="504" y="60" w="159" h="137" oX="9" oY="42" oW="173" oH="205"/>
+    <sprite n="fish11_d01.png" x="825" y="188" w="155" h="139" oX="9" oY="31" oW="173" oH="205"/>
+    <sprite n="fish11_d02.png" x="2" y="120" w="151" h="139" oX="8" oY="43" oW="173" oH="205"/>
+    <sprite n="fish11_d03.png" x="665" y="194" w="155" h="135" oX="9" oY="32" oW="173" oH="205"/>
+    <sprite n="fish13_00.png" x="2" y="762" w="93" h="35" oX="0" oY="29" oW="93" oH="93"/>
+    <sprite n="fish13_01.png" x="2" y="725" w="93" h="35" oX="0" oY="29" oW="93" oH="93"/>
+    <sprite n="fish13_02.png" x="122" y="792" w="93" h="33" oX="0" oY="30" oW="93" oH="93"/>
+    <sprite n="fish13_03.png" x="2" y="867" w="31" h="93" oX="0" oY="31" oW="93" oH="93" r="y"/>
+    <sprite n="fish13_04.png" x="626" y="408" w="27" h="93" oX="0" oY="33" oW="93" oH="93" r="y"/>
+    <sprite n="fish13_05.png" x="62" y="867" w="25" h="93" oX="0" oY="34" oW="93" oH="93" r="y"/>
+    <sprite n="fish13_06.png" x="35" y="867" w="25" h="93" oX="0" oY="34" oW="93" oH="93" r="y"/>
+    <sprite n="fish13_07.png" x="294" y="337" w="27" h="93" oX="0" oY="33" oW="93" oH="93" r="y"/>
+    <sprite n="fish13_08.png" x="2" y="834" w="93" h="31" oX="0" oY="31" oW="93" oH="93"/>
+    <sprite n="fish13_09.png" x="122" y="757" w="93" h="33" oX="0" oY="30" oW="93" oH="93"/>
+    <sprite n="fish13_d00.png" x="2" y="799" w="93" h="33" oX="0" oY="30" oW="93" oH="93"/>
+    <sprite n="fish13_d01.png" x="282" y="584" w="37" h="93" oX="0" oY="28" oW="93" oH="93" r="y"/>
+    <sprite n="fish17_00.png" x="147" y="866" w="56" h="92" oX="3" oY="20" oW="100" oH="96" r="y"/>
+    <sprite n="fish17_01.png" x="259" y="866" w="52" h="92" oX="3" oY="22" oW="100" oH="96" r="y"/>
+    <sprite n="fish17_02.png" x="313" y="866" w="50" h="92" oX="3" oY="22" oW="100" oH="96" r="y"/>
+    <sprite n="fish17_03.png" x="122" y="707" w="94" h="48" oX="1" oY="23" oW="100" oH="96"/>
+    <sprite n="fish17_04.png" x="773" y="436" w="46" h="94" oX="1" oY="24" oW="100" oH="96" r="y"/>
+    <sprite n="fish17_05.png" x="321" y="712" w="94" h="48" oX="1" oY="23" oW="100" oH="96"/>
+    <sprite n="fish17_06.png" x="205" y="866" w="52" h="92" oX="2" oY="22" oW="100" oH="96" r="y"/>
+    <sprite n="fish17_07.png" x="89" y="867" w="56" h="92" oX="2" oY="20" oW="100" oH="96" r="y"/>
+    <sprite n="fish17_08.png" x="321" y="652" w="94" h="58" oX="1" oY="20" oW="100" oH="96"/>
+    <sprite n="fish17_09.png" x="442" y="596" w="58" h="94" oX="1" oY="19" oW="100" oH="96" r="y"/>
+    <sprite n="fish17_d00.png" x="736" y="683" w="54" h="74" oX="5" oY="19" oW="100" oH="96" r="y"/>
+    <sprite n="fish17_d01.png" x="408" y="788" w="52" h="76" oX="4" oY="17" oW="100" oH="96" r="y"/>
+    <sprite n="fish17_d02.png" x="298" y="788" w="54" h="76" oX="4" oY="19" oW="100" oH="96" r="y"/>
+    <sprite n="fish17_d03.png" x="354" y="788" w="52" h="76" oX="4" oY="17" oW="100" oH="96" r="y"/>
+    <sprite n="fish18_00.png" x="928" y="492" w="78" h="48" oX="25" oY="8" oW="128" oH="64"/>
+    <sprite n="fish18_01.png" x="867" y="757" w="48" h="78" oX="25" oY="8" oW="128" oH="64" r="y"/>
+    <sprite n="fish18_02.png" x="831" y="838" w="48" h="78" oX="25" oY="8" oW="128" oH="64" r="y"/>
+    <sprite n="fish18_03.png" x="784" y="927" w="48" h="78" oX="24" oY="8" oW="128" oH="64" r="y"/>
+    <sprite n="fish18_04.png" x="711" y="548" w="48" h="76" oX="25" oY="8" oW="128" oH="64" r="y"/>
+    <sprite n="fish18_05.png" x="562" y="788" w="48" h="76" oX="24" oY="8" oW="128" oH="64" r="y"/>
+    <sprite n="fish18_06.png" x="848" y="548" w="48" h="74" oX="25" oY="8" oW="128" oH="64" r="y"/>
+    <sprite n="fish18_07.png" x="792" y="682" w="48" h="74" oX="25" oY="8" oW="128" oH="64" r="y"/>
+    <sprite n="fish18_08.png" x="512" y="788" w="48" h="76" oX="24" oY="8" oW="128" oH="64" r="y"/>
+    <sprite n="fish18_09.png" x="462" y="788" w="48" h="76" oX="25" oY="8" oW="128" oH="64" r="y"/>
+    <sprite n="fish18_10.png" x="817" y="758" w="48" h="78" oX="24" oY="8" oW="128" oH="64" r="y"/>
+    <sprite n="fish18_11.png" x="781" y="847" w="48" h="78" oX="25" oY="8" oW="128" oH="64" r="y"/>
+    <sprite n="fish18_d00.png" x="617" y="578" w="78" h="46" oX="25" oY="8" oW="128" oH="64"/>
+    <sprite n="fish18_d01.png" x="287" y="960" w="44" h="62" oX="25" oY="12" oW="128" oH="64" r="y"/>
+    <sprite n="star_fish00.png" x="486" y="957" w="60" h="64" r="y"/>
+    <sprite n="star_fish01.png" x="424" y="958" w="60" h="64" r="y"/>
+    <sprite n="star_fish02.png" x="502" y="626" w="60" h="64" r="y"/>
+    <sprite n="star_fish03.png" x="68" y="962" w="64" h="60"/>
+    <sprite n="star_fish04.png" x="225" y="960" w="60" h="62" oX="1" oY="0" oW="64" oH="60" r="y"/>
+    <sprite n="star_fish05.png" x="2" y="962" w="64" h="60"/>
+    <sprite n="star_fish06.png" x="564" y="626" w="60" h="60" oX="2" oY="0" oW="64" oH="60"/>
+</TextureAtlas>

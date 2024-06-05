@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Layer anchor-point="0,0">
+  <!--背景-->
+  <Sprite position="480,320" anchor-point="0.5,0.5">
+    <properties>
+      <property name="filename" value="ui_help_layer.png"/>
+    </properties>
+  </Sprite>
+  <!--添加各种精灵文本-->
+  <Sprite position="670,200" anchor-point="0.5,0.5">
+    <properties>
+      <property name="filename" value="ui_help_text1.png"/>
+    </properties>
+  </Sprite>
+  <Sprite position="670,450" anchor-point="0.5,0.5">
+    <properties>
+      <property name="filename" value="ui_help_text2.png"/>
+    </properties>
+  </Sprite>
+  <Sprite position="670,520" anchor-point="0.5,0.5">
+    <properties>
+      <property name="filename" value="ui_help_text3.png"/>
+    </properties>
+  </Sprite>
+  <Sprite position="500,320" anchor-point="0.5,0.5">
+    <properties>
+      <property name="filename" value="ui_help_text4.png"/>
+    </properties>
+  </Sprite>
+  <Sprite position="220,550" anchor-point="0.5,0.5">
+    <properties>
+      <property name="filename" value="ui_help_text5.png"/>
+    </properties>
+  </Sprite>
+  <Sprite position="220,450" anchor-point="0.5,0.5">
+    <properties>
+      <property name="filename" value="ui_help_text6.png"/>
+    </properties>
+  </Sprite>
+  <!--取消按钮-->
+  <Button position="100,0" anchor-point="0,0" name="close_btn">
+    <properties>
+      <property name="res-type" value="XML"/>
+      <property name="normal-image" value="UI_selectStage_close00.png"/>
+      <property name="selected-image" value="UI_selectStage_close01.png"/>
+    </properties>
+  </Button>
+</Layer>

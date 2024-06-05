@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Layer anchor-point="0,0">
+  <!--场景1-->
+  <!--bg-->
+  <Node position="0,0">
+    <Sprite position="480,320" anchor-point="0.5,0.5">
+      <properties>
+        <property name="filename" value="UI_selectStage_1.png"/>
+      </properties>
+    </Sprite>
+    <!--倍率-->
+    <Sprite position="255,143" anchor-point="0.5,0.5">
+      <properties>
+        <property name="filename" value="ratio01.png"/>
+      </properties>
+    </Sprite>
+    <!--缩略图背景-->
+    <Sprite position="370,300" anchor-point="0.5,0.5">
+      <properties>
+        <property name="filename" value="UI_selectStage_bg_0.png"/>
+      </properties>
+    </Sprite>
+    <!--缩略图-->
+    <Sprite position="370,300" anchor-point="0.5,0.5">
+      <properties>
+        <property name="filename" value="UI_selectStage_1_bg.png"/>
+      </properties>
+    </Sprite>
+    <!--渔场名称-->
+    <Sprite position="480,160" anchor-point="0.5,0.5">
+      <properties>
+        <property name="filename" value="maerdaifu.png"/>
+      </properties>
+    </Sprite>
+    <!--渔场锚-->
+    <Sprite position="580,360" anchor-point="0.5,0.5">
+      <properties>
+        <property name="filename" value="map_mark_1.png"/>
+      </properties>
+    </Sprite>
+    <!--描述-->
+    <Sprite position="250,450" anchor-point="0,0">
+      <properties>
+        <property name="filename" value="UI_description_1.png"/>
+      </properties>
+    </Sprite>  
+  <!--需要的金币-->
+  <LabelAtlas position="700,462" anchor-point="0.5,0.5">
+    <properties>
+      <property name="text" value="10"/>
+      <property name="filename" value="fonts_laser_num00.png"/>
+      <property name="item-width" value="22"/>
+      <property name="item-height" value="32"/>
+      <property name="start-char" value="48"/>
+    </properties>
+  </LabelAtlas>
+  </Node>
+  <!--场景2-->
+  <Node position="960,0">
+    <!--bg-->
+    <Sprite position="480,320" anchor-point="0.5,0.5">
+      <properties>
+        <property name="filename" value="UI_selectStage_2.png"/>
+      </properties>
+    </Sprite>
+    <!--倍率-->
+    <Sprite position="255,143" anchor-point="0.5,0.5">
+      <properties>
+        <property name="filename" value="ratio02.png"/>
+      </properties>
+    </Sprite>
+    <!--缩略图背景-->
+    <Sprite position="370,300" anchor-point="0.5,0.5">
+      <properties>
+        <property name="filename" value="UI_selectStage_bg_0.png"/>
+      </properties>
+    </Sprite>
+    <!--缩略图-->
+    <Sprite position="370,300" anchor-point="0.5,0.5">
+      <properties>
+        <property name="filename" value="UI_selectStage_2_bg.png"/>
+      </properties>
+    </Sprite>
+    <!--渔场名称-->
+    <Sprite position="480,160" anchor-point="0.5,0.5">
+      <properties>
+        <property name="filename" value="xiaweiyi.png"/>
+      </properties>
+    </Sprite>
+    <!--渔场锚-->
+    <Sprite position="580,360" anchor-point="0.5,0.5">
+      <properties>
+        <property name="filename" value="map_mark_1.png"/>
+      </properties>
+    </Sprite>
+    <!--描述-->
+    <Sprite position="250,450" anchor-point="0,0">
+      <properties>
+        <property name="filename" value="UI_description_2.png"/>
+      </properties>
+    </Sprite>
+    <!--需要的金币-->
+    <LabelAtlas position="700,505" anchor-point="0.5,0.5">
+      <properties>
+        <property name="text" value="50"/>
+        <property name="filename" value="fonts_laser_num00.png"/>
+        <property name="item-width" value="22"/>
+        <property name="item-height" value="32"/>
+        <property name="start-char" value="48"/>
+      </properties>
+    </LabelAtlas>
+  </Node>
+  <!--场景3-->
+  <Node position="1920,0">
+    <!--bg-->
+    <Sprite position="480,320" anchor-point="0.5,0.5">
+      <properties>
+        <property name="filename" value="UI_selectStage_3.png"/>
+      </properties>
+    </Sprite>
+    <!--倍率-->
+    <Sprite position="255,143" anchor-point="0.5,0.5">
+      <properties>
+        <property name="filename" value="ratio05.png"/>
+      </properties>
+    </Sprite>
+    <!--缩略图背景-->
+    <Sprite position="370,300" anchor-point="0.5,0.5">
+      <properties>
+        <property name="filename" value="UI_selectStage_bg_0.png"/>
+      </properties>
+    </Sprite>
+    <!--缩略图-->
+    <Sprite position="370,300" anchor-point="0.5,0.5">
+      <properties>
+        <property name="filename" value="UI_selectStage_3_bg.png"/>
+      </properties>
+    </Sprite>
+    <!--渔场名称-->
+    <Sprite position="480,160" anchor-point="0.5,0.5">
+      <properties>
+        <property name="filename" value="aiqinhai.png"/>
+      </properties>
+    </Sprite>
+    <!--渔场锚-->
+    <Sprite position="580,360" anchor-point="0.5,0.5">
+      <properties>
+        <property name="filename" value="map_mark_1.png"/>
+      </properties>
+    </Sprite>
+    <!--描述-->
+    <Sprite position="250,450" anchor-point="0,0">
+      <properties>
+        <property name="filename" value="UI_description_3.png"/>
+      </properties>
+    </Sprite>
+    <!--需要的金币-->
+    <LabelAtlas position="480,505" anchor-point="0.5,0.5">
+      <properties>
+        <property name="text" value="100"/>
+        <property name="filename" value="fonts_laser_num00.png"/>
+        <property name="item-width" value="22"/>
+        <property name="item-height" value="32"/>
+        <property name="start-char" value="48"/>
+      </properties>
+    </LabelAtlas>
+  </Node>
+</Layer>

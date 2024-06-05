@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ED_Fishing</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+</head>
+
+<body>
+  <canvas id="canvas" oncontextmenu="event.preventDefault()">
+  </canvas>
+
+  <script>
+    var canvas = document.getElementById('canvas');
+
+    window.Module = {
+      preRun: [],
+      postRun: [],
+      canvas: canvas,
+      print: console.log,
+      printErr: console.error,
+    };
+
+    function saveLocalStorage(key, value) {
+      localStorage.setItem(key, value)
+      return 'true'
+    }
+
+    function getLocalStorage(key) {
+      return localStorage.getItem(key)
+    }
+
+  </script>
+
+  <script async src="Fishing.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      height: 100vh;
+      width: 100vw;
+      position: relative;
+    }
+
+    #canvas {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  </style>
+
+</body>
+
+</html>

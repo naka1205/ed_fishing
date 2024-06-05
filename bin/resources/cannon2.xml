@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://texturepacker.com-->
+<!-- $TexturePacker:SmartUpdate:6350bc4601ae370f06d81045a76e440f$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+-->
+<TextureAtlas imagePath="cannon2.png" width="1024" height="1024">
+    <sprite n="fishing_net01.png" x="574" y="500" w="144" h="134" oX="17" oY="29" oW="180" oH="192"/>
+    <sprite n="fishing_net02.png" x="574" y="356" w="144" h="142" oX="18" oY="23" oW="180" oH="192" r="y"/>
+    <sprite n="fishing_net03.png" x="410" y="520" w="150" h="174" oX="14" oY="8" oW="180" oH="192"/>
+    <sprite n="fishing_net04.png" x="410" y="356" w="162" h="162" oX="8" oY="15" oW="180" oH="192"/>
+    <sprite n="fishing_net05.png" x="410" y="184" w="184" h="170" oX="5" oY="3" oW="180" oH="192" r="y"/>
+    <sprite n="fishing_net06.png" x="410" y="2" w="186" h="180" oX="0" oY="3" oW="180" oH="192" r="y"/>
+    <sprite n="fishing_net07.png" x="724" y="722" w="192" h="180" r="y"/>
+    <sprite n="fishing_net10.png" x="724" y="722" w="192" h="180" r="y"/>
+    <sprite n="fog00.png" x="26" y="928" w="22" h="55" r="y"/>
+    <sprite n="fog01.png" x="218" y="928" w="22" h="49" oX="6" oY="0" oW="55" oH="22" r="y"/>
+    <sprite n="fog02.png" x="167" y="981" w="51" h="22" oX="4" oY="0" oW="55" oH="22"/>
+    <sprite n="fog03.png" x="74" y="928" w="22" h="53" oX="2" oY="0" oW="55" oH="22" r="y"/>
+    <sprite n="fog04.png" x="2" y="985" w="55" h="22"/>
+    <sprite n="fog05.png" x="194" y="928" w="22" h="49" oX="6" oY="0" oW="55" oH="22" r="y"/>
+    <sprite n="fog06.png" x="146" y="928" w="22" h="51" oX="4" oY="0" oW="55" oH="22" r="y"/>
+    <sprite n="fog07.png" x="122" y="928" w="22" h="51" oX="3" oY="0" oW="55" oH="22" r="y"/>
+    <sprite n="fog08.png" x="59" y="983" w="53" h="22" oX="1" oY="0" oW="55" oH="22"/>
+    <sprite n="fog09.png" x="170" y="928" w="22" h="49" oX="5" oY="0" oW="55" oH="22" r="y"/>
+    <sprite n="fog10.png" x="114" y="981" w="51" h="22" oX="3" oY="0" oW="55" oH="22"/>
+    <sprite n="fog11.png" x="50" y="928" w="22" h="53" oX="1" oY="0" oW="55" oH="22" r="y"/>
+    <sprite n="fog12.png" x="98" y="928" w="22" h="51" oX="3" oY="0" oW="55" oH="22" r="y"/>
+    <sprite n="fog13.png" x="2" y="928" w="22" h="55" r="y"/>
+    <sprite n="laser_fire00.png" x="104" y="2" w="100" h="718" oX="0" oY="0" oW="100" oH="720"/>
+    <sprite n="laser_fire01.png" x="918" y="2" w="100" h="718" oX="0" oY="0" oW="100" oH="720"/>
+    <sprite n="laser_fire02.png" x="206" y="2" w="100" h="714" oX="0" oY="3" oW="100" oH="720"/>
+    <sprite n="laser_fire03.png" x="724" y="2" w="100" h="718" oX="0" oY="0" oW="100" oH="720"/>
+    <sprite n="laser_fire04.png" x="2" y="826" w="720" h="100" r="y"/>
+    <sprite n="laser_fire05.png" x="2" y="724" w="720" h="100" r="y"/>
+    <sprite n="laser_fire06.png" x="2" y="2" w="100" h="720"/>
+    <sprite n="laser_fire07.png" x="308" y="2" w="100" h="658" oX="0" oY="62" oW="100" oH="720"/>
+    <sprite n="laser_fire08.png" x="724" y="904" w="276" h="100" oX="0" oY="444" oW="100" oH="720" r="y"/>
+</TextureAtlas>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="30" height="20" tilewidth="32" tileheight="32" nextobjectid="1">
+ <properties>
+  <property name="bgm" value="sound/bgm_music_1.ogg"/>
+  <property name="fish_tide" value="1"/>
+  <property name="fishes" value="1,2,3,5,6,9,10,11,12,15"/>
+  <property name="net_gun" value="1,2,3,4,5,6,7"/>
+  <property name="ratio" type="int" value="1"/>
+  <property name="star_fish_start_time" value="0,0,0,0,0"/>
+  <property name="tax" type="float" value="0.5"/>
+ </properties>
+ <imagelayer name="background">
+  <image source="bg1.png" width="960" height="640"/>
+ </imagelayer>
+</map>

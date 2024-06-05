@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://texturepacker.com-->
+<!-- $TexturePacker:SmartUpdate:2ae0540d8ff4c3e9e8998ac9855a4841$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+-->
+<TextureAtlas imagePath="reward.png" width="512" height="512">
+    <sprite n="battery.png" x="430" y="76" w="64" h="64"/>
+    <sprite n="chest.png" x="2" y="256" w="96" h="114" oX="13" oY="0" oW="150" oH="114"/>
+    <sprite n="chest_opened.png" x="278" y="2" w="150" h="114"/>
+    <sprite n="exp.png" x="430" y="2" w="78" h="72" r="y"/>
+    <sprite n="ui_box_go.png" x="278" y="118" w="138" h="136" oX="69" oY="35" oW="276" oH="218"/>
+    <sprite n="ui_box_go_selected.png" x="2" y="2" w="274" h="218" oX="1" oY="0" oW="276" oH="218"/>
+</TextureAtlas>

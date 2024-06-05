@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://texturepacker.com-->
+<!-- $TexturePacker:SmartUpdate:cc71b4953fe5966259c061daba120e76$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+-->
+<TextureAtlas imagePath="start_ui.png" width="1024" height="1024">
+    <sprite n="UI_description_1.png" x="560" y="258" w="431" h="25"/>
+    <sprite n="UI_description_2.png" x="30" y="436" w="480" h="67"/>
+    <sprite n="UI_description_3.png" x="417" y="367" w="480" h="67"/>
+    <sprite n="UI_enterDefault.png" x="234" y="704" w="25" h="240" r="y"/>
+    <sprite n="UI_enterSuccess.png" x="597" y="918" w="144" h="25"/>
+    <sprite n="UI_selectStage_1_bg.png" x="649" y="704" w="160" h="212" r="y"/>
+    <sprite n="UI_selectStage_2_bg.png" x="487" y="704" w="160" h="212" r="y"/>
+    <sprite n="UI_selectStage_3_bg.png" x="325" y="704" w="160" h="212" r="y"/>
+    <sprite n="UI_selectStage_bg_0.png" x="2" y="704" w="230" h="258" r="y"/>
+    <sprite n="UI_selectStage_close00.png" x="422" y="300" w="120" h="65"/>
+    <sprite n="UI_selectStage_close01.png" x="2" y="300" w="118" h="65" oX="0" oY="0" oW="120" oH="65"/>
+    <sprite n="aiqinhai.png" x="451" y="918" w="144" h="28"/>
+    <sprite n="confirm_normal.png" x="811" y="830" w="62" h="154" oX="0" oY="0" oW="154" oH="64" r="y"/>
+    <sprite n="confirm_selected.png" x="261" y="331" w="154" h="62" oX="0" oY="0" oW="154" oH="64"/>
+    <sprite n="exit_00.png" x="261" y="704" w="62" h="215" r="y"/>
+    <sprite n="exit_01.png" x="30" y="367" w="215" h="62"/>
+    <sprite n="fishing_joy_title.png" x="2" y="2" w="556" h="296"/>
+    <sprite n="help_00.png" x="811" y="704" w="211" h="61" oX="1" oY="0" oW="215" oH="61"/>
+    <sprite n="help_01.png" x="811" y="767" w="205" h="61" oX="2" oY="0" oW="215" oH="61"/>
+    <sprite n="left_btn.png" x="570" y="948" w="88" h="73" oX="0" oY="2" oW="90" oH="75"/>
+    <sprite n="maerdaifu.png" x="234" y="300" w="168" h="29"/>
+    <sprite n="map_mark_1.png" x="122" y="331" w="28" h="34"/>
+    <sprite n="map_mark_2.png" x="122" y="300" w="20" h="28"/>
+    <sprite n="music00.png" x="933" y="830" w="56" h="56" oX="2" oY="2" oW="60" oH="60"/>
+    <sprite n="music01.png" x="875" y="830" w="56" h="56" oX="2" oY="2" oW="60" oH="60"/>
+    <sprite n="ratio01.png" x="710" y="945" w="48" h="67" r="y"/>
+    <sprite n="ratio02.png" x="660" y="945" w="48" h="67" r="y"/>
+    <sprite n="ratio05.png" x="942" y="285" w="48" h="67" r="y"/>
+    <sprite n="right_btn.png" x="480" y="948" w="88" h="73" oX="1" oY="0" oW="90" oH="75"/>
+    <sprite n="sound00.png" x="422" y="964" w="56" h="56" oX="2" oY="2" oW="60" oH="60"/>
+    <sprite n="sound01.png" x="152" y="300" w="56" h="56" oX="2" oY="2" oW="60" oH="60"/>
+    <sprite n="start_00.png" x="2" y="964" w="211" h="58" oX="2" oY="0" oW="215" oH="58"/>
+    <sprite n="start_01.png" x="215" y="964" w="205" h="58" oX="3" oY="0" oW="215" oH="58"/>
+    <sprite n="ui_gold.png" x="407" y="918" w="42" h="44" r="y"/>
+    <sprite n="ui_help_text1.png" x="560" y="173" w="433" h="83"/>
+    <sprite n="ui_help_text2.png" x="560" y="59" w="445" h="112"/>
+    <sprite n="ui_help_text3.png" x="995" y="173" w="26" h="529" r="y"/>
+    <sprite n="ui_help_text4.png" x="560" y="285" w="380" h="30"/>
+    <sprite n="ui_help_text5.png" x="2" y="367" w="26" h="330" r="y"/>
+    <sprite n="ui_help_text6.png" x="560" y="2" w="455" h="55"/>
+    <sprite n="xiaweiyi.png" x="261" y="921" w="144" h="28"/>
+</TextureAtlas>

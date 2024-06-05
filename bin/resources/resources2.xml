@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://texturepacker.com-->
+<!-- $TexturePacker:SmartUpdate:a4eb71e067167b13598986d11d1b331a$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+-->
+<TextureAtlas imagePath="resources2.png" width="1024" height="1024">
+    <sprite n="fish12_00.png" x="2" y="116" w="304" h="106" oX="1" oY="51" oW="320" oH="206"/>
+    <sprite n="fish12_01.png" x="616" y="224" w="304" h="106" oX="2" oY="51" oW="320" oH="206"/>
+    <sprite n="fish12_02.png" x="618" y="2" w="306" h="108" oX="1" oY="50" oW="320" oH="206"/>
+    <sprite n="fish12_03.png" x="310" y="2" w="306" h="110" oX="1" oY="49" oW="320" oH="206"/>
+    <sprite n="fish12_04.png" x="2" y="2" w="306" h="112" oX="1" oY="49" oW="320" oH="206"/>
+    <sprite n="fish12_05.png" x="310" y="114" w="304" h="110" oX="2" oY="50" oW="320" oH="206"/>
+    <sprite n="fish12_06.png" x="618" y="112" w="304" h="110" oX="1" oY="50" oW="320" oH="206"/>
+    <sprite n="fish12_07.png" x="2" y="328" w="302" h="108" oX="2" oY="50" oW="320" oH="206"/>
+    <sprite n="fish12_08.png" x="308" y="226" w="302" h="108" oX="2" oY="50" oW="320" oH="206"/>
+    <sprite n="fish12_09.png" x="612" y="332" w="302" h="106" oX="2" oY="51" oW="320" oH="206"/>
+    <sprite n="fish12_d00.png" x="924" y="189" w="98" h="300" oX="0" oY="60" oW="320" oH="206" r="y"/>
+    <sprite n="fish12_d01.png" x="306" y="336" w="302" h="102" oX="1" oY="56" oW="320" oH="206"/>
+    <sprite n="fish12_d02.png" x="2" y="438" w="284" h="126" oX="5" oY="34" oW="320" oH="206"/>
+    <sprite n="fish12_d03.png" x="2" y="224" w="304" h="102" oX="1" oY="56" oW="320" oH="206"/>
+    <sprite n="fish14_00.png" x="288" y="440" w="232" h="34" oX="2" oY="37" oW="260" oH="104"/>
+    <sprite n="fish14_01.png" x="84" y="566" w="38" h="236" oX="0" oY="37" oW="260" oH="104" r="y"/>
+    <sprite n="fish14_02.png" x="2" y="566" w="40" h="236" oX="1" oY="38" oW="260" oH="104" r="y"/>
+    <sprite n="fish14_03.png" x="44" y="566" w="38" h="236" oX="0" oY="38" oW="260" oH="104" r="y"/>
+    <sprite n="fish14_04.png" x="124" y="566" w="32" h="236" oX="0" oY="39" oW="260" oH="104" r="y"/>
+    <sprite n="fish14_05.png" x="200" y="566" w="38" h="234" oX="1" oY="33" oW="260" oH="104" r="y"/>
+    <sprite n="fish14_06.png" x="158" y="566" w="40" h="234" oX="1" oY="30" oW="260" oH="104" r="y"/>
+    <sprite n="fish14_07.png" x="240" y="566" w="46" h="232" oX="1" oY="24" oW="260" oH="104" r="y"/>
+    <sprite n="fish14_08.png" x="288" y="491" w="44" h="232" oX="0" oY="26" oW="260" oH="104" r="y"/>
+    <sprite n="fish14_09.png" x="334" y="491" w="38" h="232" oX="1" oY="31" oW="260" oH="104" r="y"/>
+    <sprite n="fish14_d00.png" x="283" y="800" w="80" h="222" oX="0" oY="2" oW="260" oH="104" r="y"/>
+    <sprite n="fish14_d01.png" x="2" y="804" w="78" h="202" oX="5" oY="3" oW="260" oH="104" r="y"/>
+    <sprite n="fish16_00.png" x="167" y="920" w="93" h="102" oX="12" oY="17" oW="130" oH="123" r="y"/>
+    <sprite n="fish16_01.png" x="926" y="2" w="96" h="99" oX="14" oY="14" oW="130" oH="123"/>
+    <sprite n="fish16_02.png" x="374" y="491" w="92" h="97" oX="12" oY="16" oW="130" oH="123"/>
+    <sprite n="fish16_03.png" x="365" y="904" w="94" h="97" oX="12" oY="15" oW="130" oH="123"/>
+    <sprite n="fish16_04.png" x="374" y="590" w="90" h="91" oX="15" oY="18" oW="130" oH="123"/>
+    <sprite n="fish16_05.png" x="82" y="924" w="83" h="98" oX="7" oY="22" oW="130" oH="123" r="y"/>
+    <sprite n="fish16_06.png" x="82" y="804" w="71" h="118" oX="4" oY="27" oW="130" oH="123" r="y"/>
+    <sprite n="fish16_07.png" x="155" y="804" w="63" h="114" oX="5" oY="31" oW="130" oH="123" r="y"/>
+    <sprite n="fish16_08.png" x="220" y="802" w="61" h="108" oX="8" oY="33" oW="130" oH="123" r="y"/>
+    <sprite n="fish16_09.png" x="365" y="796" w="75" h="106" oX="9" oY="26" oW="130" oH="123" r="y"/>
+    <sprite n="fish16_d00.png" x="288" y="725" w="80" h="69" oX="20" oY="29" oW="130" oH="123"/>
+    <sprite n="fish16_d01.png" x="374" y="683" w="84" h="85" oX="25" oY="21" oW="130" oH="123"/>
+    <sprite n="fish16_d02.png" x="926" y="103" w="95" h="84" oX="27" oY="16" oW="130" oH="123" r="y"/>
+    <sprite n="fish16_d03.png" x="442" y="770" w="82" h="83" oX="25" oY="23" oW="130" oH="123"/>
+</TextureAtlas>

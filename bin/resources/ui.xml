@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://texturepacker.com-->
+<!-- $TexturePacker:SmartUpdate:da326623453e197c5e27d3ad459cc5c5$ -->
+<!--Format:
+n  => name of the sprite
+x  => sprite x pos in texture
+y  => sprite y pos in texture
+w  => sprite width (may be trimmed)
+h  => sprite height (may be trimmed)
+oX => sprite's x-corner offset (only available if trimmed)
+oY => sprite's y-corner offset (only available if trimmed)
+oW => sprite's original width (only available if trimmed)
+oH => sprite's original height (only available if trimmed)
+r => 'y' only set if sprite is rotated
+-->
+<TextureAtlas imagePath="ui.png" width="512" height="1024">
+    <sprite n="btn_add_normal.png" x="151" y="892" w="57" h="61" oX="1" oY="0" oW="63" oH="57" r="y"/>
+    <sprite n="btn_add_selected.png" x="129" y="957" w="57" h="61" oX="1" oY="0" oW="63" oH="57" r="y"/>
+    <sprite n="btn_pause_normal.png" x="403" y="84" w="85" h="79"/>
+    <sprite n="btn_pause_selected.png" x="348" y="295" w="85" h="77" oX="0" oY="0" oW="85" oH="79"/>
+    <sprite n="btn_sub_normal.png" x="92" y="892" w="57" h="63" r="y"/>
+    <sprite n="btn_sub_selected.png" x="64" y="964" w="63" h="57"/>
+    <sprite n="button_comm_bullet.png" x="334" y="892" w="60" h="60"/>
+    <sprite n="button_diamond.png" x="312" y="954" w="60" h="60"/>
+    <sprite n="button_disable.png" x="374" y="954" w="54" h="56" oX="1" oY="3" oW="60" oH="60" r="y"/>
+    <sprite n="button_fog.png" x="272" y="892" w="60" h="60"/>
+    <sprite n="button_half_energy.png" x="250" y="954" w="60" h="60"/>
+    <sprite n="button_laser.png" x="2" y="964" w="60" h="58" oX="0" oY="1" oW="60" oH="60"/>
+    <sprite n="button_pearl.png" x="210" y="892" w="60" h="60"/>
+    <sprite n="button_strengthen.png" x="188" y="955" w="60" h="60"/>
+    <sprite n="fonts_laser_num01.png" x="92" y="82" w="34" h="26" oX="0" oY="2" oW="34" oH="28"/>
+    <sprite n="ui_chunk_text.png" x="92" y="174" w="33" h="61" r="y"/>
+    <sprite n="ui_continue_game_normal.png" x="348" y="456" w="80" h="80"/>
+    <sprite n="ui_continue_game_selected.png" x="348" y="374" w="80" h="80"/>
+    <sprite n="ui_down.png" x="2" y="2" w="88" h="960" r="y"/>
+    <sprite n="ui_main_LV.png" x="92" y="523" w="27" h="36" r="y"/>
+    <sprite n="ui_main_menu_normal.png" x="403" y="43" w="101" h="39"/>
+    <sprite n="ui_main_menu_selected.png" x="403" y="2" w="101" h="39"/>
+    <sprite n="ui_music_text.png" x="92" y="110" w="33" h="62" r="y"/>
+    <sprite n="ui_paused.png" x="129" y="106" w="217" h="578" oX="0" oY="0" oW="217" oH="600"/>
+    <sprite n="ui_pi.png" x="129" y="2" w="272" h="102"/>
+    <sprite n="ui_set_004.png" x="348" y="106" w="40" h="38" r="y"/>
+    <sprite n="ui_set_005.png" x="92" y="485" w="32" h="36" oX="0" oY="3" oW="38" oH="40" r="y"/>
+    <sprite n="ui_set_006.png" x="92" y="42" w="34" h="38"/>
+    <sprite n="ui_set_007.png" x="92" y="2" w="34" h="38"/>
+    <sprite n="ui_tollgate_normal.png" x="92" y="361" w="32" h="122" r="y"/>
+    <sprite n="ui_tollgate_selected.png" x="92" y="237" w="32" h="122" r="y"/>
+    <sprite n="ui_up.png" x="435" y="295" w="75" h="595" r="y"/>
+    <sprite n="wheel.png" x="348" y="165" w="130" h="128" r="y"/>
+</TextureAtlas>

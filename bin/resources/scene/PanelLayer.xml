@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Layer anchor-point="0,0">
+  <!--能量槽-->
+  <Sprite position="480,535" anchor-point="0.5,0.5" name="ui_energy">
+    <properties>
+      <property name="filename" value="energy_full01.png"/>
+    </properties>
+  </Sprite>
+  <!--能量槽外壳-->
+  <Sprite position="480,534" anchor-point="0.5,0.5">
+    <properties>
+      <property name="filename" value="ui_pi.png"/>
+    </properties>
+  </Sprite>
+  <!--底层ui-->
+  <Sprite position="485,596" anchor-point="0.5,0.5" name="ui_down">
+    <properties>
+      <property name="filename" value="ui_down.png"/>
+    </properties>
+  </Sprite>
+  <!--底层 '- '按钮-->
+  <Button position="380,610" name="sub_btn">
+    <properties>
+      <property name="res-type" value="XML"/>
+      <property name="normal-image" value="btn_sub_normal.png"/>
+      <property name="selected-image" value="btn_sub_selected.png"/>
+    </properties>
+  </Button>
+  <!--加号 按钮-->
+  <Button position="580,610" name="add_btn">
+    <properties>
+      <property name="res-type" value="XML"/>
+      <property name="normal-image" value="btn_add_normal.png"/>
+      <property name="selected-image" value="btn_add_selected.png"/>
+    </properties>
+  </Button>
+  <!--暂停按钮-->
+  <Button position="912,600" name="pause_btn">
+    <properties>
+      <property name="res-type" value="XML"/>
+      <property name="normal-image" value="btn_pause_normal.png"/>
+      <property name="selected-image" value="btn_pause_selected.png"/>
+    </properties>
+  </Button>
+  <!--上层ui-->
+  <Sprite position="480,0" anchor-point="0.5,0">
+    <properties>
+      <property name="filename" value="ui_up.png"/>
+    </properties>
+  </Sprite>
+  <!--轮子-->
+  <Sprite position="480,40" anchor-point="0.5,0.5">
+    <properties>
+      <property name="filename" value="wheel.png"/>
+    </properties>
+  </Sprite>
+  <!--lv-->
+  <Sprite position="480,80" anchor-point="0.5,0.5">
+    <properties>
+      <property name="filename" value="ui_main_LV.png"/>
+    </properties>
+  </Sprite>
+  <!--等级控件-->
+  <LabelAtlas position="480,25" anchor-point="0.5f,0.5f" name="lv">
+    <properties>
+      <property name="text" value="01"/>
+      <property name="filename" value="ui_text_02.png"/>
+      <property name="item-width" value="22"/>
+      <property name="item-height" value="28"/>
+      <property name="start-char" value="48"/>
+    </properties>
+  </LabelAtlas>
+</Layer>

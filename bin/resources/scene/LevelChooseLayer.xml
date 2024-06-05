@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Layer anchor-point="0,0">
+  <!--关卡-->
+  <Xml name="level_page_view" anchor-point="0,0">
+    <properties>
+      <property name="filename" value="scene/LevelPageView.xml"/>
+    </properties>
+  </Xml>
+  <!--取消按钮-->
+  <Button position="100,0" anchor-point="0,0" name="close_btn">
+    <properties>
+      <property name="res-type" value="XML"/>
+      <property name="normal-image" value="UI_selectStage_close00.png"/>
+      <property name="selected-image" value="UI_selectStage_close01.png"/>
+    </properties>
+  </Button>
+  <!--确定按钮-->
+  <Button position="480,550" name="confirm_btn">
+    <properties>
+      <property name="res-type" value="XML"/>
+      <property name="normal-image" value="confirm_normal.png"/>
+      <property name="selected-image" value="confirm_selected.png"/>
+    </properties>
+  </Button>
+  <!--left按钮-->
+  <Button position="50,320" name="left_btn">
+    <properties>
+      <property name="res-type" value="XML"/>
+      <property name="normal-image" value="left_btn.png"/>
+    </properties>
+  </Button>
+  <!--right按钮-->
+  <Button position="900,320" name="right_btn">
+    <properties>
+      <property name="res-type" value="XML"/>
+      <property name="normal-image" value="right_btn.png"/>
+    </properties>
+  </Button>
+  <!--金币-->
+  <Sprite position="780,21" anchor-point="0.5,0.5">
+    <properties>
+      <property name="filename" value="ui_gold.png"/>
+    </properties>
+  </Sprite>
+  <!--金币的个数-->
+  <LabelAtlas position="800,23" anchor-point="0,0.5" name="gold">
+    <properties>
+      <property name="text" value="200"/>
+      <property name="filename" value="ui_text_01.png"/>
+      <property name="item-width" value="26"/>
+      <property name="item-height" value="34"/>
+      <property name="start-char" value="48"/>
+    </properties>
+  </LabelAtlas>
+</Layer>

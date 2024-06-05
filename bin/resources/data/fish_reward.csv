@@ -1,0 +1,5 @@
+fishID,rewardName,number,scope
+15,chest,1,1
+16,energy,10,1
+5,SterengthenBullet,1,0.1
+12,battery,1,0.5

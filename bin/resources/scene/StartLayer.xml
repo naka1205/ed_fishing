@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Layer anchor-point="0,0">
+  <!--捕鱼达人精灵-->
+  <Sprite position="480,0" anchor-point="0.5,0">
+    <properties>
+      <property name="filename" value="fishing_joy_title.png"/>
+    </properties>
+  </Sprite>  
+  <!--开始游戏按钮-->
+  <Button position="480,350" name="start_btn">
+    <properties>
+      <property name="res-type" value="XML"/>
+      <property name="normal-image" value="start_00.png"/>
+      <property name="selected-image" value="start_01.png"/>
+    </properties>
+  </Button>
+  <!--帮助按钮-->
+  <Button position="480,408" name="help_btn">
+    <properties>
+      <property name="res-type" value="XML"/>
+      <property name="normal-image" value="help_00.png"/>
+      <property name="selected-image" value="help_01.png"/>
+    </properties>
+  </Button>
+  <!--退出游戏按钮-->
+  <Button position="480,466" name="exit_btn">
+    <properties>
+      <property name="res-type" value="XML"/>
+      <property name="normal-image" value="exit_00.png"/>
+      <property name="selected-image" value="exit_01.png"/>
+    </properties>
+  </Button>
+  <!--音乐-->
+  <CheckBox position="800,350" name="music_btn">
+    <properties>
+      <property name="res-type" value="XML"/>
+      <property name="background" value="music00.png"/>
+      <property name="cross" value="music01.png"/>
+    </properties>
+  </CheckBox>
+  <!--音效-->
+  <CheckBox position="800,420" name="chunk_btn">
+    <properties>
+      <property name="res-type" value="XML"/>
+      <property name="background" value="sound00.png"/>
+      <property name="cross" value="sound01.png"/>
+    </properties>
+  </CheckBox>
+</Layer>
