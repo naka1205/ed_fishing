@@ -35,14 +35,13 @@ void StaticData::purge()
 }
 bool StaticData::init()
 {
-	bool bRet = true;
 	//读取文件
-	m_plistMap = FileUtils::getInstance()->getValueMapFromFile(m_staticDataPath);
-	bRet |= !m_plistMap.empty();
+	m_plistMap = FileUtils::getInstance()->getValueMapFromFile(STATIC_DATA_PATH);
 	
 	//加载路径信息
 	auto path = this->getValueForKey("fish_path_path")->asString();
 	m_pathes = FileUtils::getInstance()->getValueMapFromFile(path);
+
 	//加载鱼潮信息
 	this->parseFishTide();
 	//加载鱼的配置信息
@@ -54,7 +53,7 @@ bool StaticData::init()
 	//加载鱼所对应的奖励
 	this->parseFishReward();
 
-	return bRet;
+	return true;
 }
 
 Value *StaticData::getValueForKey(const string&key)
@@ -67,13 +66,15 @@ Value *StaticData::getValueForKey(const string&key)
 }
 Point StaticData::getPointForKey(const string&key)
 {
-	Point ret;
+	Point point;
 
 	auto value = this->getValueForKey(key);
-	if(value->getType() != Value::Type::STRING)
-		return ret;
-	ret = PointFromString(value->asString());
-	return ret;
+
+	if (value != nullptr)
+	{
+		point = PointFromString(value->asString());
+	}
+	return point;
 }
 
 FishTideConfig& StaticData::getFishTideByID(int fishTideID)
@@ -101,22 +102,7 @@ RotateAndSpeed*StaticData::getActionByPathID(int pathID,const Size&size,float of
 
 		action = this->getAction(valueMap,size,offsetX,randomY,reverse);
 	}
-/*	else if(value.getType() == Value::Type::VECTOR)
-	{
-		vector<FiniteTimeAction*> actions;
-		auto values = value.asValueVector();
 
-		for(auto iter = values.begin();iter != values.end();iter++)
-		{
-			ValueMap&valueMap = iter->asValueMap();
-
-			auto action = this->getAction(valueMap,reverse);
-
-			actions.push_back(action);
-		}
-
-		action = Sequence::create(actions);
-	}*/
 
 	return RotateAndSpeed::create(action);
 }

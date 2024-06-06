@@ -27,19 +27,19 @@ bool LevelLayer::initWithLevelName(const string&levelName)
 	this->addChild(m_pTiledMap);
 
 	this->parseFishID();
-	this->parseNetGun();
-	this->parseFishTide();
-	this->parseStarFishStartTime();
-	//获取场景倍率
-	auto rateName = STATIC_DATA_STRING("level_ratio");
-	auto valueRate = m_pTiledMap->getPropertyForName(rateName);
+	// this->parseNetGun();
+	// this->parseFishTide();
+	// this->parseStarFishStartTime();
+	// //获取场景倍率
+	// auto rateName = STATIC_DATA_STRING("level_ratio");
+	// auto valueRate = m_pTiledMap->getPropertyForName(rateName);
 
-	m_nRatio = valueRate.asInt();
-	//获取当前场景的抽税值
-	auto taxName = STATIC_DATA_STRING("level_tax");
-	auto valueTax = m_pTiledMap->getPropertyForName(taxName);
+	// m_nRatio = valueRate.asInt();
+	// //获取当前场景的抽税值
+	// auto taxName = STATIC_DATA_STRING("level_tax");
+	// auto valueTax = m_pTiledMap->getPropertyForName(taxName);
 
-	m_fTax = valueTax.asFloat();
+	// m_fTax = valueTax.asFloat();
 
 	return true;
 }
@@ -114,25 +114,25 @@ void LevelLayer::parseStarFishStartTime()
 template<typename T>
 void LevelLayer::parse(const string&src,const string&token,vector<T>&vect)
 {
-	unsigned int nend = 0;
+	
+	size_t nend = 0;
+	size_t tokenSize = token.size();
 	unsigned int nbegin = 0;
-	unsigned int tokenSize = token.size();
-
+	
 	while(nend != std::string::npos)
 	{
 		nend = src.find(token,nbegin);
+
 		if(nend == std::string::npos)
 		{
 			auto str = src.substr(nbegin, src.length()-nbegin);
 			float id = stof(str);
-
 			vect.push_back(id);
 		}
 		else
 		{
 			auto str = src.substr(nbegin, nend-nbegin);
 			float id = stof(str);
-
 			vect.push_back(id);
 		}
 		nbegin = nend + tokenSize;

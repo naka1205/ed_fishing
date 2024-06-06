@@ -36,11 +36,19 @@ bool GameScene::init()
 	s_pWorld->SetContactListener(this);
 	// 预加载 todo
 	this->preloadResources();
+	
 	// 关卡层
 	int tollgateIndex = FishingJoyData::getInstance()->getTollgateIndex();
 	auto tollgateName = StringUtils::format("level/level%d.tmx", tollgateIndex + 1);
 	m_pLevelLayer = LevelLayer::create(tollgateName);
 	this->addChild(m_pLevelLayer);
+
+	// 鱼层
+	m_pFishLayer = FishLayer::create();
+	m_pFishLayer->setDelegate(this);
+	m_pFishLayer->reset();
+	this->addChild(m_pFishLayer);
+
 	// ui
 	m_pPanelLayer = PanelLayer::create();
 	this->addChild(m_pPanelLayer);
@@ -50,11 +58,7 @@ bool GameScene::init()
 	this->addChild(m_pTouchLayer);
 	m_pTouchLayer->setDelegate(this);
 
-	// 鱼层
-	m_pFishLayer = FishLayer::create();
-	m_pFishLayer->setDelegate(this);
-	m_pFishLayer->reset();
-	this->addChild(m_pFishLayer);
+
 	// 网枪弹层
 	m_pBulletLayer = BulletLayer::create();
 	m_pBulletLayer->setDelegate(this);
@@ -143,9 +147,8 @@ void GameScene::preloadResources()
 		spriteFrameCache->addSpriteFramesWithFile(filename);
 	}
 
-	auto crop_end_filename = STATIC_DATA_STRING("crop_end_filename");
 	// 加载动画
-	AnimationCache::getInstance()->addAnimationsWithFile(crop_end_filename);
+	AnimationCache::getInstance()->addAnimationsWithFile(STATIC_DATA_STRING("animation_filepath"));
 }
 
 void GameScene::purge()
