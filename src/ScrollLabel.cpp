@@ -112,18 +112,18 @@ void ScrollLabel::setIndex(int index,float duration,bool down)
 
 void ScrollLabel::visit()
 {
-	Size size = this->getContentSize();
-	auto pos = this->convertToWorldSpace(Point::ZERO);
+	// Size size = this->getContentSize();
+	// auto pos = this->convertToWorldSpace(Point::ZERO);
 
-	SDL_Rect rect = {pos.x,pos.y,size.width,size.height};
+	// SDL_Rect rect = {pos.x,pos.y,size.width,size.height};
 
-	Renderer*renderer = Director::getInstance()->getRenderer();
+	// Renderer*renderer = Director::getInstance()->getRenderer();
 
-	renderer->setClipRect(&rect);
+	// renderer->setClipRect(&rect);
 
-	Node::visit();
+	// Node::visit();
 
-	renderer->setClipRect(nullptr);
+	// renderer->setClipRect(nullptr);
 }
 
 void ScrollLabel::update(float dt)

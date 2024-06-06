@@ -135,15 +135,17 @@ void GameScene::preloadResources()
 {
 	// 获取图片资源数组
 	auto spriteFrameCache = Director::getInstance()->getSpriteFrameCache();
-	ValueVector values = StaticData::getInstance()->getValueForKey("fish_src_filepath").asValueVector();
+	auto values = StaticData::getInstance()->getValueForKey("fish_src_filepath")->asValueVector();
 
 	for (auto value : values)
 	{
 		auto filename = value.asString();
 		spriteFrameCache->addSpriteFramesWithFile(filename);
 	}
+
+	auto crop_end_filename = STATIC_DATA_STRING("crop_end_filename");
 	// 加载动画
-	AnimationCache::getInstance()->addAnimationsWithFile(STATIC_DATA_STRING("animation_filepath"));
+	AnimationCache::getInstance()->addAnimationsWithFile(crop_end_filename);
 }
 
 void GameScene::purge()

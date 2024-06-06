@@ -22,7 +22,8 @@ int main(int argc, char *argv[])
 	}
 
 	FileUtils::getInstance()->addSearchPath(RESOURCES_DIR);
-
+	FileUtils::getInstance()->addSearchPath(SOUND_DIR);
+	
 	SDL_SetHint(SDL_HINT_RENDER_VSYNC, "1");
 
 	Director::getInstance()->runWithScene(FlashScene::create());

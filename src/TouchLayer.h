@@ -1,6 +1,6 @@
 #ifndef __TouchLayer_H__
 #define __TouchLayer_H__
-#include "SDL.h"
+#include "SDL2/SDL.h"
 
 #include "SG_Engine.h"
 using namespace SDL;

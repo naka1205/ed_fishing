@@ -41,7 +41,7 @@ bool StaticData::init()
 	bRet |= !m_plistMap.empty();
 	
 	//加载路径信息
-	auto path = this->getValueForKey("fish_path_path").asString();
+	auto path = this->getValueForKey("fish_path_path")->asString();
 	m_pathes = FileUtils::getInstance()->getValueMapFromFile(path);
 	//加载鱼潮信息
 	this->parseFishTide();
@@ -57,22 +57,22 @@ bool StaticData::init()
 	return bRet;
 }
 
-Value &StaticData::getValueForKey(const string&key)
+Value *StaticData::getValueForKey(const string&key)
 {
 	auto iter = m_plistMap.find(key);
 	if(iter != m_plistMap.end())
-		return iter->second;
+		return &iter->second;
 	
-	return Value("");
+	return nullptr;
 }
 Point StaticData::getPointForKey(const string&key)
 {
 	Point ret;
 
 	auto value = this->getValueForKey(key);
-	if(value.getType() != Value::Type::STRING)
+	if(value->getType() != Value::Type::STRING)
 		return ret;
-	ret = PointFromString(value.asString());
+	ret = PointFromString(value->asString());
 	return ret;
 }
 
@@ -298,7 +298,7 @@ ActionInterval*StaticData::getAction(const ValueMap&valueMap,const Size&size,flo
 void StaticData::parseFishConfig()
 {
 	//加载fish配置信息
-	auto path = this->getValueForKey("fish_csv_path").asString();
+	auto path = this->getValueForKey("fish_csv_path")->asString();
 	//获取字符串,并设置为字符流
 	stringstream text(FileUtils::getInstance()->getDataFromFile(path));
 	string line;
@@ -344,7 +344,7 @@ void StaticData::parseFishPath()
 	stringstream text;
 	string line;
 	//加载fish path对应信息
-	auto path = this->getValueForKey("fish_path_csv_path").asString();
+	auto path = this->getValueForKey("fish_path_csv_path")->asString();
 	//重置信息
 	text.str(FileUtils::getInstance()->getDataFromFile(path));
 	int n = 0;
@@ -381,7 +381,7 @@ void StaticData::parseFishPath()
 
 void StaticData::parseFishTide()
 {
-	string path = this->getValueForKey("fish_tide_path").asString();
+	string path = this->getValueForKey("fish_tide_path")->asString();
 	auto valueMap = FileUtils::getInstance()->getValueMapFromFile(path);
 
 	for(auto value : valueMap)
@@ -410,7 +410,7 @@ void StaticData::parseFishTide()
 void StaticData::parseChestReward()
 {
 	//获取路径
-	auto path = this->getValueForKey("chest_reward_path").asString();
+	auto path = this->getValueForKey("chest_reward_path")->asString();
 	//获取value
 	auto valueVector = FileUtils::getInstance()->getValueVectorFromFile(path);
 	//parse
@@ -431,7 +431,7 @@ void StaticData::parseFishReward()
 	stringstream text;
 	string line;
 	//加载fish path对应信息
-	auto path = this->getValueForKey("fish_reward_csv_path").asString();
+	auto path = this->getValueForKey("fish_reward_csv_path")->asString();
 	//重置信息
 	text.str(FileUtils::getInstance()->getDataFromFile(path));
 	int n = 0;

@@ -14,10 +14,10 @@ class RotateAndSpeed;
 
 #define STATIC_DATA_PATH "data/static_data.plist"
 
-#define STATIC_DATA_STRING(key) (StaticData::getInstance()->getValueForKey(key).asString())
-#define STATIC_DATA_INT(key) StaticData::getInstance()->getValueForKey(key).asInt()
-#define STATIC_DATA_FLOAT(key) StaticData::getInstance()->getValueForKey(key).asFloat()
-#define STATIC_DATA_BOOLEAN(key) StaticData::getInstance()->getValueForKey(key).asBool()
+#define STATIC_DATA_STRING(key) (StaticData::getInstance()->getValueForKey(key)->asString())
+#define STATIC_DATA_INT(key) StaticData::getInstance()->getValueForKey(key)->asInt()
+#define STATIC_DATA_FLOAT(key) StaticData::getInstance()->getValueForKey(key)->asFloat()
+#define STATIC_DATA_BOOLEAN(key) StaticData::getInstance()->getValueForKey(key)->asBool()
 #define STATIC_DATA_POINT(key) (StaticData::getInstance()->getPointForKey(key))
 
 #define STATIC_FISH_EXP(id) (StaticData::getInstance()->getExpByFishID(id))
@@ -111,7 +111,7 @@ public:
 	static void purge();
 	bool init();
 
-	Value &getValueForKey(const string&key);
+	Value *getValueForKey(const string&key);
 
 	Point getPointForKey(const string&key);
 

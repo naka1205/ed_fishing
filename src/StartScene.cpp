@@ -43,8 +43,7 @@ bool StartScene::init()
 	m_pStartLayer->updateUI();
 	m_pLevelChooseLayer->updateUI();
 	//加载音乐
-	SoundManager::getInstance()->addSoundAsync("sound/bgm_start_scene.ogg",Music::TYPE
-		,SDL_CALLBACK_2(StartScene::asyncLoadMusicCallback,this));
+	SoundManager::getInstance()->addSoundAsync("sound/bgm_start_scene.ogg",Music::TYPE ,SDL_CALLBACK_2(StartScene::asyncLoadMusicCallback,this));
 
 	return true;
 }

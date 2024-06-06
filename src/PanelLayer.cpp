@@ -272,7 +272,7 @@ void PanelLayer::setBtnEnable(bool enable)
 void PanelLayer::initBullets()
 {
 	//获取按钮排版
-	auto valueVector = StaticData::getInstance()->getValueForKey("bullets").asValueVector();
+	auto valueVector = StaticData::getInstance()->getValueForKey("bullets")->asValueVector();
 	//获取当前选中的子弹名称
 	
 	auto selectedBulletName = FishingJoyData::getInstance()->getSelectedBullet();
