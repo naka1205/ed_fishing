@@ -63,6 +63,8 @@ public:
 	void showAddAndSubBtn();
 	//隐藏add sub按钮
 	void hideAddAndSubBtn();
+	//更新全部
+	void update();
 	//更新能量槽
 	void updateEnergy();
 	//更新金币数量
@@ -71,10 +73,10 @@ public:
 	void updateLevel();
 	//更新经验值
 	void updateExp();
-	//更新全部
-	void updateSelf();
-	void updateBulletBtns();//更新子弹按钮
+	//更新子弹按钮
+	void updateBulletBtns();
 	void updateHalfEnergyBtn();
+
 	//设置选中当前子弹
 	void setSelectedBulletBtn(const string&name);
 	void setSelectedBulletBtn(ItemButton*button);

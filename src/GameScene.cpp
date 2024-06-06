@@ -49,56 +49,57 @@ bool GameScene::init()
 	m_pFishLayer->reset();
 	this->addChild(m_pFishLayer);
 
+	// 效果层
+	m_pEffectLayer = EffectLayer::create();
+	this->addChild(m_pEffectLayer);
+
 	// ui
 	m_pPanelLayer = PanelLayer::create();
-	this->addChild(m_pPanelLayer);
 	m_pPanelLayer->setDelegate(this);
+	m_pPanelLayer->update();
+	this->addChild(m_pPanelLayer);
+	
 	// 事件层
 	m_pTouchLayer = TouchLayer::create();
-	this->addChild(m_pTouchLayer);
 	m_pTouchLayer->setDelegate(this);
-
-
+	this->addChild(m_pTouchLayer);
+	
 	// 网枪弹层
 	m_pBulletLayer = BulletLayer::create();
 	m_pBulletLayer->setDelegate(this);
 	this->addChild(m_pBulletLayer);
+
 	// 渔网层
 	m_pFishingEntityLayer = FishingEntityLayer::create();
 	m_pFishingEntityLayer->setDelegate(this);
 	this->addChild(m_pFishingEntityLayer);
+
 	// 大炮层
 	m_pCannon = Cannon::create();
 	m_pCannon->setDelegate(this);
 	m_pCannon->setNetGunBullets(m_pLevelLayer->getNetGunBulletVec());
-
-	this->addChild(m_pCannon);
-	// 设置位置
 	m_pCannon->setPosition(m_pPanelLayer->getConnonBornPos());
+	this->addChild(m_pCannon);
+
 	// 添加金币计数器
 	m_pGoldTimer = GoldTimer::create();
 	m_pGoldTimer->setDelegate(this);
 	m_pGoldTimer->setPosition(STATIC_DATA_POINT("gold_timer_pos"));
-
 	this->addChild(m_pGoldTimer);
-	// 效果层
-	m_pEffectLayer = EffectLayer::create();
-	this->addChild(m_pEffectLayer);
+
 	// 奖励层
 	m_pRewardLayer = RewardLayer::create();
 	m_pRewardLayer->setDelegate(this);
 	this->addChild(m_pRewardLayer);
+
 	// 暂停层
 	m_pPauseLayer = PauseLayer::create();
 	m_pPauseLayer->setDelegate(this);
 	m_pPauseLayer->updateUI();
-	// 设置位置出界
 	m_pPauseLayer->setPosition(0, -visibleSize.height);
 
 	this->addChild(m_pPauseLayer);
-	// 刷新当前面板显示内容
-	m_pPanelLayer->updateSelf();
-	// 播放背景音乐
+
 	this->playBackgroundMusic();
 
 	this->scheduleUpdate();

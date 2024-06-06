@@ -41,42 +41,28 @@ bool PanelLayer::init()
 	//获取暂停按钮控件
 	m_pPauseBtn = node->getChildByName<ui::Button*>(STATIC_DATA_STRING("pause_btn_name"));
 	m_pPauseBtn->addClickEventListener(SDL_CALLBACK_1(PanelLayer::pauseBtnCallback,this));
+
 	//添加控件
-	auto energyProgressSpriteName = STATIC_DATA_STRING("energy_progress_sprite_name");
-	m_pEnergyProgress = ProgressTimer::create(Sprite::create(energyProgressSpriteName));
-	//[50,100]
+	m_pEnergyProgress = ProgressTimer::create(Sprite::create(STATIC_DATA_STRING("energy_progress_sprite_name")));
 	m_pEnergyProgress->setPercentage(50);
-
 	m_pEnergyProgress->setRotation(90);
-	//设置位置
-	auto energyPos = STATIC_DATA_POINT("energy_progress_pos");
-	m_pEnergyProgress->setPosition(energyPos);
-
+	m_pEnergyProgress->setPosition(STATIC_DATA_POINT("energy_progress_pos"));
 	this->addChild(m_pEnergyProgress,-1);
+
 	//添加经验控件
-	auto expSpriteName = STATIC_DATA_STRING("exp_sprite_name");
-	Point expProgressPos = STATIC_DATA_POINT("exp_progress_pos");
-
-	m_pExpProgress = ProgressTimer::create(Sprite::create(expSpriteName));
-
+	m_pExpProgress = ProgressTimer::create(Sprite::create(STATIC_DATA_STRING("exp_sprite_name")));
 	m_pExpProgress->setType(ProgressTimer::Type::BAR);
 	m_pExpProgress->setMidpoint(Point::ZERO);
 	m_pExpProgress->setBarChangeRate(Point(1.f,0));
-	m_pExpProgress->setPosition(expProgressPos);
-
+	m_pExpProgress->setPosition(STATIC_DATA_POINT("exp_progress_pos"));
 	this->addChild(m_pExpProgress);
-	//金币展示版 todo
-	m_pGoldCounter = GoldCounter::create(200);
-	m_pGoldCounter->setPosition(140,594);
-	m_pGoldCounter->scheduleUpdate();
-	this->addChild(m_pGoldCounter);
+
+
 	//添加子弹按钮
 	m_pSelectedBullet = ItemButton::create();
-	//设置位置,位置不变，变的是精灵和数字
-	auto bulletPos = STATIC_DATA_POINT("bullet_button_pos");
-
-	m_pSelectedBullet->setPosition(bulletPos);
+	m_pSelectedBullet->setPosition(STATIC_DATA_POINT("bullet_button_pos"));
 	m_pSelectedBullet->setButtonType(ButtonType::Bullet);
+	
 	//添加能量值按钮
 	auto halfEnergyPos = PointFromString(STATIC_DATA_STRING("energy_button_pos"));
 	auto halfEnergySpriteName = STATIC_DATA_STRING("energy_sprite_name");
@@ -90,6 +76,13 @@ bool PanelLayer::init()
 
 	m_pBtnMenu = Menu::create(m_pSelectedBullet,m_pHalfEnergyBtn,nullptr);
 	this->addChild(m_pBtnMenu);
+
+	
+	//金币展示版 todo
+	m_pGoldCounter = GoldCounter::create(200);
+	m_pGoldCounter->setPosition(300,300);
+	m_pGoldCounter->scheduleUpdate();
+	this->addChild(m_pGoldCounter);
 
 	this->initBullets();
 	
@@ -110,9 +103,8 @@ void PanelLayer::setDelegate(PanelLayerDelegate*pDelegate)
 void PanelLayer::runEnergyAnimation()
 {
 	m_pEnergyUI->setVisible(true);
-	auto animationName = STATIC_DATA_STRING("energy_full_anim");
 
-	auto animation = AnimationCache::getInstance()->getAnimation(animationName);
+	auto animation = AnimationCache::getInstance()->getAnimation(STATIC_DATA_STRING("energy_full_anim"));
 	auto animate = Animate::create(animation);
 
 	m_pEnergyUI->runAction(animate);
@@ -178,7 +170,7 @@ void PanelLayer::updateExp()
 	m_pExpProgress->setPercentage(percentage);
 }
 
-void PanelLayer::updateSelf()
+void PanelLayer::update()
 {
 	this->updateEnergy();
 	this->updateExp();

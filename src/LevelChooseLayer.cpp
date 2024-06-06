@@ -17,8 +17,7 @@ LevelChooseLayer::~LevelChooseLayer()
 bool LevelChooseLayer::init()
 {
 	//添加外部文件
-	string xml = "scene/LevelChooseLayer.xml";
-	auto node = ui::UIWidgetManager::getInstance()->createWidgetsWithXml(xml);
+	auto node = ui::UIWidgetManager::getInstance()->createWidgetsWithXml("scene/LevelChooseLayer.xml");
 	this->addChild(node);
 	//获取各种有用的控件
 	m_pCloseBtn = node->getChildByName<ui::Button*>("close_btn");

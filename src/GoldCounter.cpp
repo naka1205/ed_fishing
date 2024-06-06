@@ -27,16 +27,18 @@ bool GoldCounter::init(int number)
 	//添加图片资源
 	vector<Sprite*> vec;
 
-	vec.push_back(Sprite::create("ui_text_01.png",Rect(0,0,26,34)));
-	vec.push_back(Sprite::create("ui_text_01.png",Rect(26,0,26,34)));
-	vec.push_back(Sprite::create("ui_text_01.png",Rect(52,0,26,34)));
-	vec.push_back(Sprite::create("ui_text_01.png",Rect(78,0,26,34)));
-	vec.push_back(Sprite::create("ui_text_01.png",Rect(104,0,26,34)));
-	vec.push_back(Sprite::create("ui_text_01.png",Rect(130,0,26,34)));
-	vec.push_back(Sprite::create("ui_text_01.png",Rect(156,0,26,34)));
-	vec.push_back(Sprite::create("ui_text_01.png",Rect(182,0,26,34)));
-	vec.push_back(Sprite::create("ui_text_01.png",Rect(208,0,26,34)));
-	vec.push_back(Sprite::create("ui_text_01.png",Rect(234,0,26,34)));
+	Texture *texture = Director::getInstance()->getTextureCache()->getTextureForKey("ui_text_01.png");
+
+	vec.push_back(Sprite::createWithTexture(texture,Rect(0,0,26,34)));
+	vec.push_back(Sprite::createWithTexture(texture,Rect(26,0,26,34)));
+	vec.push_back(Sprite::createWithTexture(texture,Rect(52,0,26,34)));
+	vec.push_back(Sprite::createWithTexture(texture,Rect(78,0,26,34)));
+	vec.push_back(Sprite::createWithTexture(texture,Rect(104,0,26,34)));
+	vec.push_back(Sprite::createWithTexture(texture,Rect(130,0,26,34)));
+	vec.push_back(Sprite::createWithTexture(texture,Rect(156,0,26,34)));
+	vec.push_back(Sprite::createWithTexture(texture,Rect(182,0,26,34)));
+	vec.push_back(Sprite::createWithTexture(texture,Rect(208,0,26,34)));
+	vec.push_back(Sprite::createWithTexture(texture,Rect(234,0,26,34)));
 
 	Size size = vec.at(0)->getContentSize();
 	int curNumber = m_nNumber = number;

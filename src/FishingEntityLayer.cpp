@@ -80,11 +80,9 @@ void FishingEntityLayer::addLaser(const Point &pos, float rotation)
 	this->addChild(laser);
 	m_fishingEntitys.push_back(laser);
 
-	// 修正位置 todo
-	// Size size = laser->getContentSize() + Size(60, 60);
 	Size size = laser->getContentSize();
-	// size->setSize(size.width + 60.f, size.height + 60.f);
-
+	size.height += 60.f;
+	
 	float degree = SDL_ANGLE_TO_DEGREE(rotation);
 
 	offset.x = size.height / 2 * SDL_sinf(degree);

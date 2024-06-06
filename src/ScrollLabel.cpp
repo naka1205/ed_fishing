@@ -1,16 +1,13 @@
 #include "ScrollLabel.h"
 
 ScrollLabel::ScrollLabel()
-	:m_nCurIndex(0),m_bDown(true)
-	,m_pCurSprite(nullptr),m_pNextSprite(nullptr)
-	,m_nTargetIndex(0),m_bUpdated(false)
-	,m_speed(0.f)
+	: m_nCurIndex(0), m_bDown(true), m_pCurSprite(nullptr), m_pNextSprite(nullptr), m_nTargetIndex(0), m_bUpdated(false), m_speed(0.f)
 {
 }
 
 ScrollLabel::~ScrollLabel()
 {
-	for(auto iter = m_sprites.begin();iter != m_sprites.end();)
+	for (auto iter = m_sprites.begin(); iter != m_sprites.end();)
 	{
 		auto sprite = *iter;
 		sprite->release();
@@ -19,11 +16,11 @@ ScrollLabel::~ScrollLabel()
 	}
 }
 
-ScrollLabel*ScrollLabel::create(const vector<Sprite*>&vec,const Size&size,int curIndex)
+ScrollLabel *ScrollLabel::create(const vector<Sprite *> &vec, const Size &size, int curIndex)
 {
 	auto label = new ScrollLabel();
 
-	if(label && label->init(vec,size,curIndex))
+	if (label && label->init(vec, size, curIndex))
 		label->autorelease();
 	else
 		SDL_SAFE_DELETE(label);
@@ -31,25 +28,25 @@ ScrollLabel*ScrollLabel::create(const vector<Sprite*>&vec,const Size&size,int cu
 	return label;
 }
 
-bool ScrollLabel::init(const vector<Sprite*>&vec,const Size&size,int curIndex)
+bool ScrollLabel::init(const vector<Sprite *> &vec, const Size &size, int curIndex)
 {
-	for(auto sprite:vec)
+	for (auto sprite : vec)
 	{
 		sprite->retain();
 		m_sprites.push_back(sprite);
 	}
 	this->setContentSize(size);
-	//设置当前的精灵
-	m_nCurIndex  = m_nTargetIndex= curIndex;
+	// 设置当前的精灵
+	m_nCurIndex = m_nTargetIndex = curIndex;
 
 	m_pCurSprite = Sprite::createWithSpriteFrame(m_sprites.at(m_nCurIndex)->getSpriteFrame());
-	m_pCurSprite->setPosition(size.width/2,size.height/2);
+	m_pCurSprite->setPosition(size.width / 2, size.height / 2);
 	this->addChild(m_pCurSprite);
 
 	int logicIndex = this->getNexLogicIndex(m_nCurIndex);
-	
+
 	m_pNextSprite = Sprite::createWithSpriteFrame(m_sprites.at(logicIndex)->getSpriteFrame());
-	m_pNextSprite->setPosition(size.width/2,size.height/2);
+	m_pNextSprite->setPosition(size.width / 2, size.height / 2);
 	m_pNextSprite->setVisible(false);
 
 	this->addChild(m_pNextSprite);
@@ -57,14 +54,14 @@ bool ScrollLabel::init(const vector<Sprite*>&vec,const Size&size,int curIndex)
 	return true;
 }
 
-void ScrollLabel::setIndex(int index,float duration,bool down)
+void ScrollLabel::setIndex(int index, float duration, bool down)
 {
 	bool bChange = false;
 	bool ret = false;
 
-	if(m_nTargetIndex == m_nCurIndex)
+	if (m_nTargetIndex == m_nCurIndex)
 		bChange = true;
-	else if(down != m_bDown)
+	else if (down != m_bDown)
 	{
 		m_nCurIndex = this->getNexLogicIndex(m_nCurIndex);
 		ret = true;
@@ -74,12 +71,12 @@ void ScrollLabel::setIndex(int index,float duration,bool down)
 
 	m_nTargetIndex = index;
 	m_bDown = down;
-	//确定临近的精灵的贴图和位置
+	// 确定临近的精灵的贴图和位置
 	int nextLogicInde = this->getNexLogicIndex(m_nCurIndex);
 	Point nextPos = this->getNexLogicPos();
 
 	m_bUpdated = true;
-	//确定距离和速度
+	// 确定距离和速度
 	int number = 0;
 	int temp = m_nCurIndex;
 	do
@@ -87,22 +84,22 @@ void ScrollLabel::setIndex(int index,float duration,bool down)
 		temp = this->getNexLogicIndex(temp);
 		number += 1;
 
-	}while(temp != m_nTargetIndex);
+	} while (temp != m_nTargetIndex);
 
 	Size size = this->getContentSize();
 
-	float offsetY = m_pCurSprite->getPositionY() - size.height/2.f;
+	float offsetY = m_pCurSprite->getPositionY() - size.height / 2.f;
 
-	float distance = number*size.height - offsetY;
+	float distance = number * size.height - offsetY;
 
-	m_speed = distance/duration;
+	m_speed = distance / duration;
 
 	if (bChange)
 	{
-		m_pNextSprite->setPosition(nextPos + Point(0,offsetY));
+		m_pNextSprite->setPosition(nextPos + Point(0, offsetY));
 		m_pNextSprite->setSpriteFrame(m_sprites.at(nextLogicInde)->getSpriteFrame());
 	}
-	if(ret)
+	if (ret)
 	{
 		auto temp = m_pCurSprite;
 		m_pCurSprite = m_pNextSprite;
@@ -128,54 +125,54 @@ void ScrollLabel::visit()
 
 void ScrollLabel::update(float dt)
 {
-	if(!m_bUpdated)
+	if (!m_bUpdated)
 		return;
 	auto size = this->getContentSize();
 	auto pos = m_pCurSprite->getPosition();
 
-	float speed = m_speed*dt;
+	float speed = m_speed * dt;
 
-	if(m_bDown)
+	if (m_bDown)
 	{
-		m_pCurSprite->setPosition(pos + Point(0,speed));
-		m_pNextSprite->setPosition(m_pNextSprite->getPosition() + Point(0,speed));
+		m_pCurSprite->setPosition(pos + Point(0, speed));
+		m_pNextSprite->setPosition(m_pNextSprite->getPosition() + Point(0, speed));
 
-		//到达下一索引
-		if(pos.y >= size.height/2*3)
+		// 到达下一索引
+		if (pos.y >= size.height / 2 * 3)
 		{
 			m_nCurIndex = this->getNexLogicIndex(m_nCurIndex);
 
 			m_pCurSprite->setSpriteFrame(m_pNextSprite->getSpriteFrame());
-			m_pCurSprite->setPosition(size.width/2,size.height/2);
-			//确定临近的精灵的贴图和位置
+			m_pCurSprite->setPosition(size.width / 2, size.height / 2);
+			// 确定临近的精灵的贴图和位置
 			int nextLogicIndex = this->getNexLogicIndex(m_nCurIndex);
 
 			m_pNextSprite->setSpriteFrame(m_sprites.at(nextLogicIndex)->getSpriteFrame());
 			m_pNextSprite->setPosition(this->getNexLogicPos());
 
-			if(m_nCurIndex == m_nTargetIndex)
+			if (m_nCurIndex == m_nTargetIndex)
 				m_bUpdated = false;
 		}
 	}
 	else
 	{
-		m_pCurSprite->setPosition(pos - Point(0,speed));
-		m_pNextSprite->setPosition(m_pNextSprite->getPosition() - Point(0,speed));
+		m_pCurSprite->setPosition(pos - Point(0, speed));
+		m_pNextSprite->setPosition(m_pNextSprite->getPosition() - Point(0, speed));
 
-		//到达下一索引
-		if(pos.y <= -size.height/2)
+		// 到达下一索引
+		if (pos.y <= -size.height / 2)
 		{
 			m_nCurIndex = this->getNexLogicIndex(m_nCurIndex);
 
 			m_pCurSprite->setSpriteFrame(m_pNextSprite->getSpriteFrame());
-			m_pCurSprite->setPosition(size.width/2,size.height/2);
-			//确定临近的精灵的贴图和位置
+			m_pCurSprite->setPosition(size.width / 2, size.height / 2);
+			// 确定临近的精灵的贴图和位置
 			int nextLogicIndex = this->getNexLogicIndex(m_nCurIndex);
 
 			m_pNextSprite->setSpriteFrame(m_sprites.at(nextLogicIndex)->getSpriteFrame());
 			m_pNextSprite->setPosition(this->getNexLogicPos());
 
-			if(m_nCurIndex == m_nTargetIndex)
+			if (m_nCurIndex == m_nTargetIndex)
 				m_bUpdated = false;
 		}
 	}
@@ -185,16 +182,16 @@ int ScrollLabel::getNexLogicIndex(int index)
 {
 	int size = m_sprites.size();
 
-	if(m_bDown)
+	if (m_bDown)
 	{
-		if(index < size - 1)
+		if (index < size - 1)
 			return index + 1;
 		else
 			return 0;
 	}
-	else if(!m_bDown)
+	else if (!m_bDown)
 	{
-		if(index <= 0)
+		if (index <= 0)
 			return size - 1;
 		else
 			return index - 1;
@@ -206,8 +203,8 @@ Point ScrollLabel::getNexLogicPos()
 {
 	Size size = this->getContentSize();
 
-	if(!m_bDown)
-		return Point(size.width/2,size.height/2*3);
-	else
-		return Point(size.width/2,-size.height/2);
+	if (!m_bDown)
+		return Point(size.width / 2, size.height / 2 * 3);
+
+	return Point(size.width / 2, -size.height / 2);
 }

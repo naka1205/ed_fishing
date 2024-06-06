@@ -15,8 +15,7 @@ StartLayer::~StartLayer()
 bool StartLayer::init()
 {
 	//添加外部文件
-	string xml = "scene/StartLayer.xml";
-	auto node = ui::UIWidgetManager::getInstance()->createWidgetsWithXml(xml);
+	auto node = ui::UIWidgetManager::getInstance()->createWidgetsWithXml("scene/StartLayer.xml");
 	this->addChild(node);
 	//获取各种有用的信息
 	m_pStartBtn = node->getChildByName<ui::Button*>("start_btn");
