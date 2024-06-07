@@ -1,45 +1,8 @@
-/*
-* Copyright (c) 2007-2011 Erin Catto http://www.box2d.org
-*
-* This software is provided 'as-is', without any express or implied
-* warranty.  In no event will the authors be held liable for any damages
-* arising from the use of this software.
-* Permission is granted to anyone to use this software for any purpose,
-* including commercial applications, and to alter it and redistribute it
-* freely, subject to the following restrictions:
-* 1. The origin of this software must not be misrepresented; you must not
-* claim that you wrote the original software. If you use this software
-* in a product, an acknowledgment in the product documentation would be
-* appreciated but is not required.
-* 2. Altered source versions must be plainly marked as such, and must not be
-* misrepresented as being the original software.
-* 3. This notice may not be removed or altered from any source distribution.
-*/
-
 #include "./b2GearJoint.h"
 #include "./b2RevoluteJoint.h"
 #include "./b2PrismaticJoint.h"
 #include "../b2Body.h"
 #include "../b2TimeStep.h"
-
-// Gear Joint:
-// C0 = (coordinate1 + ratio * coordinate2)_initial
-// C = (coordinate1 + ratio * coordinate2) - C0 = 0
-// J = [J1 ratio * J2]
-// K = J * invM * JT
-//   = J1 * invM1 * J1T + ratio * ratio * J2 * invM2 * J2T
-//
-// Revolute:
-// coordinate = rotation
-// Cdot = angularVelocity
-// J = [0 0 1]
-// K = J * invM * JT = invI
-//
-// Prismatic:
-// coordinate = dot(p - pg, ug)
-// Cdot = dot(v + cross(w, r), ug)
-// J = [ug cross(r, ug)]
-// K = J * invM * JT = invMass + invI * cross(r, ug)^2
 
 b2GearJoint::b2GearJoint(const b2GearJointDef* def)
 : b2Joint(def)

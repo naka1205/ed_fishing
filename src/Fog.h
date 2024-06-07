@@ -8,7 +8,7 @@ class Fish;
 class Fog:public FishingEntity
 {
 private:
-	Fish*m_pFish;//ÃÔÎíËùÒÀ¸½µÄ¸ÕÌå
+	Fish*m_pFish;
 public:
 	Fog();
 	~Fog();

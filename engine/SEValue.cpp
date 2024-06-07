@@ -4,38 +4,38 @@ NS_SDL_BEGIN
 const Value Value::Null;
 
 Value::Value()
-	: _type(Type::NONE)
+		: _type(Type::NONE)
 {
 	memset(&_field, 0, sizeof(_field));
 }
 Value::Value(unsigned char v)
-	: _type(Type::BYTE)
+		: _type(Type::BYTE)
 {
 	_field.byteVal = v;
 }
 Value::Value(int v)
-	: _type(Type::INTEGER)
+		: _type(Type::INTEGER)
 {
 	_field.intVal = v;
 }
 Value::Value(float v)
-	: _type(Type::FLOAT)
+		: _type(Type::FLOAT)
 {
 	_field.floatVal = v;
 }
 Value::Value(double v)
-	: _type(Type::DOUBLE)
+		: _type(Type::DOUBLE)
 {
 	//_field.floatVal = (float)v;
 	_field.doubleVal = v;
 }
 Value::Value(bool v)
-	: _type(Type::BOOLEAN)
+		: _type(Type::BOOLEAN)
 {
 	_field.boolVal = v;
 }
 Value::Value(const char *v)
-	: _type(Type::STRING)
+		: _type(Type::STRING)
 {
 	_field.stringVal = new std::string();
 	if (v)
@@ -44,31 +44,31 @@ Value::Value(const char *v)
 	}
 }
 Value::Value(const std::string &v)
-	: _type(Type::STRING)
+		: _type(Type::STRING)
 {
 	_field.stringVal = new std::string();
 	*_field.stringVal = v;
 }
 Value::Value(const ValueVector &v)
-	: _type(Type::VECTOR)
+		: _type(Type::VECTOR)
 {
 	_field.vectorVal = new ValueVector();
 	*_field.vectorVal = v;
 }
 Value::Value(const ValueMap &v)
-	: _type(Type::MAP)
+		: _type(Type::MAP)
 {
 	_field.mapVal = new ValueMap();
 	*_field.mapVal = v;
 }
 Value::Value(const ValueMapIntKey &v)
-	: _type(Type::INT_KEY_MAP)
+		: _type(Type::INT_KEY_MAP)
 {
 	_field.intKeyMapVal = new ValueMapIntKey();
 	*_field.intKeyMapVal = v;
 }
 Value::Value(const Value &v)
-	: _type(Type::NONE)
+		: _type(Type::NONE)
 {
 	*this = v;
 }

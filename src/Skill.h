@@ -8,48 +8,52 @@ class Fish;
 
 class Skill
 {
-	SDL_SYNTHESIZE(float,m_rate,Rate);//成功发动的几率
-	SDL_SYNTHESIZE(float,m_duration,Duration);//技能持续时间
+	SDL_SYNTHESIZE(float, m_rate, Rate);
+	SDL_SYNTHESIZE(float, m_duration, Duration);
+
 public:
 	Skill()
-		:m_rate(0.f),m_duration(0.f)
-	{}
+			: m_rate(0.f), m_duration(0.f)
+	{
+	}
 
-	virtual void skillEnter(Fish*fish)=0;
-	virtual void skillExit(Fish*fish)=0;
+	virtual ~Skill() {}
+
+	virtual void skillEnter(Fish *fish) = 0;
+	virtual void skillExit(Fish *fish) = 0;
 };
-//-----------------------SkillNothing--------------------------
-class SkillNothing:public Skill
+
+class SkillNothing : public Skill
 {
 public:
-	SkillNothing(float rate,float duration);
+	SkillNothing(float rate, float duration);
 
-	virtual void skillEnter(Fish*fish);
-	virtual void skillExit(Fish*fish);
+	virtual void skillEnter(Fish *fish);
+	virtual void skillExit(Fish *fish);
 };
-//-------------------------SkillSpeedUp---------------------------------
-class SkillSpeedUp:public Skill
+
+class SkillSpeedUp : public Skill
 {
 public:
-	SkillSpeedUp(float rate,float duration);
-	virtual void skillEnter(Fish*fish);
-	virtual void skillExit(Fish*fish);
+	SkillSpeedUp(float rate, float duration);
+	virtual void skillEnter(Fish *fish);
+	virtual void skillExit(Fish *fish);
 };
-//------------------------SkillScared-----------------------------------
-class SkillScared:public Skill
+
+class SkillScared : public Skill
 {
 public:
 	SkillScared(float rate);
-	virtual void skillEnter(Fish*fish);
-	virtual void skillExit(Fish*fish);
+	virtual void skillEnter(Fish *fish);
+	virtual void skillExit(Fish *fish);
 };
-//------------------------SkillInvulnerable---------------------------------
-class SkillInvulnerable:public Skill
+
+class SkillInvulnerable : public Skill
 {
 public:
-	SkillInvulnerable(float rate,float duration);
+	SkillInvulnerable(float rate, float duration);
 
-	virtual void skillEnter(Fish*fish);
-	virtual void skillExit(Fish*fish);
+	virtual void skillEnter(Fish *fish);
+	virtual void skillExit(Fish *fish);
 };
 #endif

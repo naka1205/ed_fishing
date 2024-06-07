@@ -1,7 +1,7 @@
 #ifndef __Pearl_H__
 #define __Pearl_H__
 #include "FishingNet.h"
-/*ÕäÖéµ¯*/
+
 class Pearl:public FishingEntity
 {
 private:
@@ -10,7 +10,7 @@ private:
 public:
 	Pearl();
 	~Pearl();
-	//ÄÜÁ¿Öµ
+
 	CREATE_FUNC(Pearl);
 	bool init();
 

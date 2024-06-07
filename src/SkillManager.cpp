@@ -18,7 +18,6 @@ SkillManager::~SkillManager()
 
 bool SkillManager::init()
 {
-	//todo 新建一些技能
 	Skill*skill1 = new SkillNothing(0.7f,3.f);
 	Skill*skill2 = new SkillSpeedUp(0.4,3.f);
 	Skill*skill3 = new SkillScared(1.f);

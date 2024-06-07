@@ -47,12 +47,12 @@ static __TYPE__*create()         \
 #define SDL_SAFE_RELEASE_NULL(p)do{if(p) p->release(); p = nullptr;}while(0)
 #define SDL_SAFE_RETAIN(p) do { if(p) { (p)->retain(); } } while(0)
 #define SDL_BREAK_IF(cond) if(cond) break
-//c++11
+
 #define SDL_CALLBACK_0(__selector__,__target__,...) std::bind(&__selector__,__target__,##__VA_ARGS__)
 #define SDL_CALLBACK_1(__selector__,__target__,...) std::bind(&__selector__,__target__,std::placeholders::_1,##__VA_ARGS__)
 #define SDL_CALLBACK_2(__selector__,__target__,...) std::bind(&__selector__,__target__,std::placeholders::_1,std::placeholders::_2,##__VA_ARGS__)
 #define SDL_CALLBACK_3(__selector__,__target__,...) std::bind(&__selector__,__target__,std::placeholders::_1,std::placeholders::_2,std::placeholders::_3,##__VA_ARGS__)
-//自定义宏 主要用于简化开发
+
 #define SDL_SYNTHESIZE(varType,varName,funName)\
 protected:varType varName;\
 public:virtual varType get##funName()const{return varName;}\
@@ -80,7 +80,7 @@ public:virtual void set##funName(varType var)\
 		varName = var;\
 	}\
 }
-/*只读*/
+
 #define SDL_SYNTHESIZE_READONLY(varType,varName,funcName) \
 protected:varType varName;                                \
 public: virtual varType get##funcName(void)const{return varName;}
@@ -89,7 +89,6 @@ public: virtual varType get##funcName(void)const{return varName;}
 protected: varType varName;					       \
 public: virtual const varType& get##funcName() const {return varName;}
 
-//声明一个保护变量和相应的函数声明，需要自行定义
 #define SDL_PROPERTY(varType, varName, funName) \
 protected: varType varName;			\
 public: virtual varType get##funName();		\

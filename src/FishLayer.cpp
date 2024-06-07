@@ -38,8 +38,8 @@ void FishLayer::update(float dt)
 		if(fish->isDead())
 		{
 			//发送死亡消息
-/*			auto uniqueID = to_string(fish->getUniqueID());
-			_eventDispatcher->dispatchCustomEvent(uniqueID);*/
+			// auto uniqueID = to_string(fish->getUniqueID());
+			// _eventDispatcher->dispatchCustomEvent(uniqueID);
 
 			if(curState == Fish::State::Caught)
 			{

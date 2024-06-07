@@ -1,34 +1,38 @@
 #ifndef __SDL_EventListenerTouchOneByOne_H__
 #define __SDL_EventListenerTouchOneByOne_H__
-#include<functional>
+#include <functional>
 #include "SEEventListener.h"
 NS_SDL_BEGIN
 class Touch;
-class EventListenerTouchOneByOne:public EventListener
+class EventListenerTouchOneByOne : public EventListener
 {
 private:
-	bool _bTouchBegan;//保存onTouchBegan的返回值
+	bool _bTouchBegan;
+
 public:
- 	static const std::string LISTENER_ID;
+	static const std::string LISTENER_ID;
+
 public:
 	EventListenerTouchOneByOne();
-	virtual~EventListenerTouchOneByOne();
-	static EventListenerTouchOneByOne*create();
+	virtual ~EventListenerTouchOneByOne();
+	static EventListenerTouchOneByOne *create();
 	bool init();
+
 public:
-	typedef std::function<bool (Touch*,SDL_Event*event)> ccTouchBeganCallback;
-	typedef std::function<void (Touch*,SDL_Event*event)> ccTouchCallback;
-	//必须得注册onTouchBegan事件
+	typedef std::function<bool(Touch *, SDL_Event *event)> ccTouchBeganCallback;
+	typedef std::function<void(Touch *, SDL_Event *event)> ccTouchCallback;
+
 	ccTouchBeganCallback onTouchBegan;
 	ccTouchCallback onTouchMoved;
 	ccTouchCallback onTouchEnded;
 	ccTouchCallback onTouchCancelled;
+
 public:
-	bool isTouchBegan()const;
+	bool isTouchBegan() const;
 	void setTouchBegan(bool touchBegan);
-	//override
-	virtual bool checkAvailable()const;
-	EventListener*clone();
+
+	virtual bool checkAvailable() const;
+	EventListener *clone();
 };
 NS_SDL_END
 #endif

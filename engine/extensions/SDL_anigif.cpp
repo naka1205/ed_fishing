@@ -183,7 +183,7 @@ int AG_LoadGIF_RW(SDL_RWops *src, AG_Frame *frames, int maxFrames)
 	// 	gd->gs.Background = buf[5];
 	// 	gd->gs.AspectRatio = buf[6];
 
-	// 	if (BitSet(buf[4], LOCALCOLORMAP)) /* Global Colormap */
+	// 	if (BitSet(buf[4], LOCALCOLORMAP))
 	// 	{
 	// 		if (ReadColorMap(gd, gd->gs.BitPixel, gd->gs.ColorMap))
 	// 		{
@@ -200,10 +200,10 @@ int AG_LoadGIF_RW(SDL_RWops *src, AG_Frame *frames, int maxFrames)
 	// 			goto done;
 	// 		}
 
-	// 		if (c == ';') /* GIF terminator */
+	// 		if (c == ';')
 	// 			goto done;
 
-	// 		if (c == '!') /* Extension */
+	// 		if (c == '!')
 	// 		{
 	// 			if (!SDL_RWread(src, &c, 1, 1))
 	// 			{
@@ -214,7 +214,7 @@ int AG_LoadGIF_RW(SDL_RWops *src, AG_Frame *frames, int maxFrames)
 	// 			continue;
 	// 		}
 
-	// 		if (c != ',') /* Not a valid start character */
+	// 		if (c != ',')
 	// 			continue;
 
 	// 		if (!SDL_RWread(src, buf, 9, 1))
@@ -253,7 +253,7 @@ int AG_LoadGIF_RW(SDL_RWops *src, AG_Frame *frames, int maxFrames)
 	// 			frames[iFrame].y = LM_to_uint(buf[2], buf[3]);
 	// 			frames[iFrame].disposal = gd->g89.disposal;
 	// 			frames[iFrame].delay = gd->g89.delayTime * 10;
-	// 			/*			gd->g89.transparent		= -1;			** Hmmm, not sure if this should be reset for each frame? */
+	// 			
 	// 		}
 
 	// 		iFrame++;

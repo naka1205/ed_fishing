@@ -21,8 +21,7 @@ private:
 public:
 	ScrollLabel();
 	~ScrollLabel();
-	/**
-	*/
+
 	static ScrollLabel*create(const vector<Sprite*>&vec,const Size&size,int curIndex);
 	bool init(const vector<Sprite*>&vec,const Size&size,int curIndex);
 

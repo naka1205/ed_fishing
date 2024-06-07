@@ -24,7 +24,7 @@ private:
 public:
 	StarFish();
 	~StarFish();
-	/*startTime 0~1*/
+
 	static StarFish*create(float startTime);
 	bool init(float startTime);
 	void dead();//在死亡时调用

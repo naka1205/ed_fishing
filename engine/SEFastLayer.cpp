@@ -547,10 +547,8 @@ void FastLayer::uncompression(const std::string &compression, const std::string 
 		uLongf numGids = _width * _height * sizeof(unsigned);
 		auto gids = std::vector<unsigned>(numGids);
 
-		// unzip
 		uncompress((Bytef *)&gids[0], &numGids, (const Bytef *)decodeIDs.c_str(), decodeIDs.size());
 
-		// 赋值
 		_data = std::vector<unsigned>(_width * _height);
 		std::copy(gids.begin(), gids.begin() + _width * _height, _data.begin());
 	}

@@ -32,15 +32,15 @@ void TouchLayer::setTouchEnable(bool enable)
 
 bool TouchLayer::onTouchBegan(Touch*touch,SDL_Event*event)
 {
-/*	Point target = touch->getLocation();
-	Rect rect=Rect(0,288,600,72);
-	//如果点击海面，传到CannonLayer
-	if(!rect.containsPoint(target))
-		m_pDelegate->cannonAimAt(target);
-	//如果点击的不是海面，传到BulletChooseLayer
-	else
-		m_pDelegate->chooseBullet(target);
-	return false;*/
+	// Point target = touch->getLocation();
+	// Rect rect=Rect(0,288,600,72);
+	// //如果点击海面，传到CannonLayer
+	// if(!rect.containsPoint(target))
+	// 	m_pDelegate->cannonAimAt(target);
+	// //如果点击的不是海面，传到BulletChooseLayer
+	// else
+	// 	m_pDelegate->chooseBullet(target);
+	// return false;
 	m_pDelegate->onTouchBegan(touch,event);
 	return true;
 }

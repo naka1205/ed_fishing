@@ -20,8 +20,8 @@ public:
 private:
 	float _percentage;
 	Type _type;
-	Sprite *_sprite; // 起辅助作用
-	Sprite *_bg;	 // 显示的主要是这个
+	Sprite *_sprite;
+	Sprite *_bg;
 	Point _midpoint;
 	Point _barChangeRate;
 
@@ -33,22 +33,22 @@ public:
 
 	static ProgressTimer *create(Sprite *sprite);
 	bool initWithSprite(Sprite *sprite);
-	// 设置分量
+
 	inline float getPercentage() const { return _percentage; }
 	void setPercentage(float percentage);
-	// 设置类型
+
 	inline Type getType() const { return _type; }
 	void setType(Type type);
-	// 设置精灵
+
 	Sprite *getSprite() const { return _sprite; }
 	void setSprite(Sprite *sprite);
-	// 设置mid point
+
 	Point getMidpoint() const { return _midpoint; }
 	void setMidpoint(const Point &midpoint);
-	//
+
 	Point getBarChangeRate() const { return _barChangeRate; }
 	void setBarChangeRate(const Point &barChangeRate);
-	// override
+
 	void setRotation(float rotation);
 
 private:

@@ -51,17 +51,16 @@ public:
 		}
 	}
 
-	//+
 	Point operator+(const Point &v2) const
 	{
 		return Point(x + v2.x, y + v2.y);
 	}
-	//*
+
 	Point operator*(float scalar)
 	{
 		return Point(x * scalar, y * scalar);
 	}
-	//*=
+
 	Point &operator*=(float scalar)
 	{
 		x *= scalar;
@@ -69,17 +68,17 @@ public:
 
 		return *this;
 	}
-	//-
+
 	Point operator-(const Point &v2) const
 	{
 		return Point(x - v2.x, y - v2.y);
 	}
-	// /÷
+
 	Point operator/(float scalar)
 	{
 		return Point(x / scalar, y / scalar);
 	}
-	//  /=
+
 	Point &operator/=(float scalar)
 	{
 		x /= scalar;
@@ -88,7 +87,6 @@ public:
 		return *this;
 	}
 
-	//+=
 	friend Point &operator+=(Point &v1, const Point &v2)
 	{
 		v1.x += v2.x;
@@ -96,7 +94,7 @@ public:
 
 		return v1;
 	}
-	//-=
+
 	friend Point &operator-=(Point &v1, const Point &v2)
 	{
 		v1.x -= v2.x;
@@ -134,9 +132,7 @@ public:
 		return Point(cosf(a), sinf(a));
 	}
 
-	static bool isLineIntersect(const Point &A, const Point &B,
-								const Point &C, const Point &D,
-								float *S = nullptr, float *T = nullptr);
+	static bool isLineIntersect(const Point &A, const Point &B, const Point &C, const Point &D, float *S = nullptr, float *T = nullptr);
 
 	SDL_Point getSDL_Point() const;
 };

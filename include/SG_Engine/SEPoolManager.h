@@ -9,18 +9,20 @@ NS_SDL_BEGIN
 class PoolManager : public Object
 {
 private:
-	static PoolManager* _pInstance;
-	AutoreleasePool* _releasePool;
+	static PoolManager *_pInstance;
+	AutoreleasePool *_releasePool;
+
 private:
 	PoolManager();
 	~PoolManager();
+
 public:
-	static PoolManager* getInstance();
-	//release the single instance
+	static PoolManager *getInstance();
+
 	static void purge();
-	AutoreleasePool* getCurReleasePool();
-	void addObject(Object* pObject);
-	void removeObject(Object* pObject);
+	AutoreleasePool *getCurReleasePool();
+	void addObject(Object *pObject);
+	void removeObject(Object *pObject);
 };
 NS_SDL_END
 #endif

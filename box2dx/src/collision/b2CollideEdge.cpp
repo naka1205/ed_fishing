@@ -1,41 +1,19 @@
-/*
- * Copyright (c) 2007-2009 Erin Catto http://www.box2d.org
- *
- * This software is provided 'as-is', without any express or implied
- * warranty.  In no event will the authors be held liable for any damages
- * arising from the use of this software.
- * Permission is granted to anyone to use this software for any purpose,
- * including commercial applications, and to alter it and redistribute it
- * freely, subject to the following restrictions:
- * 1. The origin of this software must not be misrepresented; you must not
- * claim that you wrote the original software. If you use this software
- * in a product, an acknowledgment in the product documentation would be
- * appreciated but is not required.
- * 2. Altered source versions must be plainly marked as such, and must not be
- * misrepresented as being the original software.
- * 3. This notice may not be removed or altered from any source distribution.
- */
-
 #include "./b2Collision.h"
 #include "./shapes/b2CircleShape.h"
 #include "./shapes/b2EdgeShape.h"
 #include "./shapes/b2PolygonShape.h"
 
-// Compute contact points for edge versus circle.
-// This accounts for edge connectivity.
 void b2CollideEdgeAndCircle(b2Manifold* manifold,
 							const b2EdgeShape* edgeA, const b2Transform& xfA,
 							const b2CircleShape* circleB, const b2Transform& xfB)
 {
 	manifold->pointCount = 0;
 	
-	// Compute circle in frame of edge
 	b2Vec2 Q = b2MulT(xfA, b2Mul(xfB, circleB->m_p));
 	
 	b2Vec2 A = edgeA->m_vertex1, B = edgeA->m_vertex2;
 	b2Vec2 e = B - A;
 	
-	// Barycentric coordinates
 	float32 u = b2Dot(e, B - Q);
 	float32 v = b2Dot(e, Q - A);
 	
@@ -44,8 +22,7 @@ void b2CollideEdgeAndCircle(b2Manifold* manifold,
 	b2ContactFeature cf;
 	cf.indexB = 0;
 	cf.typeB = b2ContactFeature::e_vertex;
-	
-	// Region A
+
 	if (v <= 0.0f)
 	{
 		b2Vec2 P = A;
@@ -55,8 +32,7 @@ void b2CollideEdgeAndCircle(b2Manifold* manifold,
 		{
 			return;
 		}
-		
-		// Is there an edge connected to A?
+
 		if (edgeA->m_hasVertex0)
 		{
 			b2Vec2 A1 = edgeA->m_vertex0;
@@ -64,7 +40,6 @@ void b2CollideEdgeAndCircle(b2Manifold* manifold,
 			b2Vec2 e1 = B1 - A1;
 			float32 u1 = b2Dot(e1, B1 - Q);
 			
-			// Is the circle in Region AB of the previous edge?
 			if (u1 > 0.0f)
 			{
 				return;
@@ -82,8 +57,7 @@ void b2CollideEdgeAndCircle(b2Manifold* manifold,
 		manifold->points[0].localPoint = circleB->m_p;
 		return;
 	}
-	
-	// Region B
+
 	if (u <= 0.0f)
 	{
 		b2Vec2 P = B;
@@ -93,8 +67,7 @@ void b2CollideEdgeAndCircle(b2Manifold* manifold,
 		{
 			return;
 		}
-		
-		// Is there an edge connected to B?
+
 		if (edgeA->m_hasVertex3)
 		{
 			b2Vec2 B2 = edgeA->m_vertex3;
@@ -102,7 +75,6 @@ void b2CollideEdgeAndCircle(b2Manifold* manifold,
 			b2Vec2 e2 = B2 - A2;
 			float32 v2 = b2Dot(e2, Q - A2);
 			
-			// Is the circle in Region AB of the next edge?
 			if (v2 > 0.0f)
 			{
 				return;
@@ -121,7 +93,6 @@ void b2CollideEdgeAndCircle(b2Manifold* manifold,
 		return;
 	}
 	
-	// Region AB
 	float32 den = b2Dot(e, e);
 	b2Assert(den > 0.0f);
 	b2Vec2 P = (1.0f / den) * (u * A + v * B);
@@ -150,7 +121,6 @@ void b2CollideEdgeAndCircle(b2Manifold* manifold,
 	manifold->points[0].localPoint = circleB->m_p;
 }
 
-// This structure is used to keep track of the best separating axis.
 struct b2EPAxis
 {
 	enum Type
@@ -165,7 +135,6 @@ struct b2EPAxis
 	float32 separation;
 };
 
-// This holds polygon B expressed in frame A.
 struct b2TempPolygon
 {
 	b2Vec2 vertices[b2_maxPolygonVertices];
@@ -173,7 +142,6 @@ struct b2TempPolygon
 	int32 count;
 };
 
-// Reference face used for clipping
 struct b2ReferenceFace
 {
 	int32 i1, i2;
@@ -189,7 +157,6 @@ struct b2ReferenceFace
 	float32 sideOffset2;
 };
 
-// This class collides and edge and a polygon, taking into account edge adjacency.
 struct b2EPCollider
 {
 	void Collide(b2Manifold* manifold, const b2EdgeShape* edgeA, const b2Transform& xfA,
@@ -217,15 +184,6 @@ struct b2EPCollider
 	bool m_front;
 };
 
-// Algorithm:
-// 1. Classify v1 and v2
-// 2. Classify polygon centroid as front or back
-// 3. Flip normal if necessary
-// 4. Initialize normal range to [-pi, pi] about face normal
-// 5. Adjust normal range according to adjacent edges
-// 6. Visit each separating axes, only accept axes within the range
-// 7. Return if _any_ axis indicates separation
-// 8. Clip
 void b2EPCollider::Collide(b2Manifold* manifold, const b2EdgeShape* edgeA, const b2Transform& xfA,
 						   const b2PolygonShape* polygonB, const b2Transform& xfB)
 {
@@ -248,7 +206,6 @@ void b2EPCollider::Collide(b2Manifold* manifold, const b2EdgeShape* edgeA, const
 	float32 offset0 = 0.0f, offset2 = 0.0f;
 	bool convex1 = false, convex2 = false;
 	
-	// Is there a preceding edge?
 	if (hasVertex0)
 	{
 		b2Vec2 edge0 = m_v1 - m_v0;
@@ -257,8 +214,7 @@ void b2EPCollider::Collide(b2Manifold* manifold, const b2EdgeShape* edgeA, const
 		convex1 = b2Cross(edge0, edge1) >= 0.0f;
 		offset0 = b2Dot(m_normal0, m_centroidB - m_v0);
 	}
-	
-	// Is there a following edge?
+
 	if (hasVertex3)
 	{
 		b2Vec2 edge2 = m_v3 - m_v2;
@@ -268,7 +224,6 @@ void b2EPCollider::Collide(b2Manifold* manifold, const b2EdgeShape* edgeA, const
 		offset2 = b2Dot(m_normal2, m_centroidB - m_v2);
 	}
 	
-	// Determine front or back collision. Determine collision normal limits.
 	if (hasVertex0 && hasVertex3)
 	{
 		if (convex1 && convex2)
@@ -423,7 +378,6 @@ void b2EPCollider::Collide(b2Manifold* manifold, const b2EdgeShape* edgeA, const
 		}
 	}
 	
-	// Get polygonB in frameA
 	m_polygonB.count = polygonB->m_count;
 	for (int32 i = 0; i < polygonB->m_count; ++i)
 	{
@@ -437,7 +391,6 @@ void b2EPCollider::Collide(b2Manifold* manifold, const b2EdgeShape* edgeA, const
 	
 	b2EPAxis edgeAxis = ComputeEdgeSeparation();
 	
-	// If no valid normal can be found than this edge should not collide.
 	if (edgeAxis.type == b2EPAxis::e_unknown)
 	{
 		return;
@@ -454,7 +407,6 @@ void b2EPCollider::Collide(b2Manifold* manifold, const b2EdgeShape* edgeA, const
 		return;
 	}
 	
-	// Use hysteresis for jitter reduction.
 	const float32 k_relativeTol = 0.98f;
 	const float32 k_absoluteTol = 0.001f;
 	
@@ -478,7 +430,6 @@ void b2EPCollider::Collide(b2Manifold* manifold, const b2EdgeShape* edgeA, const
 	{
 		manifold->type = b2Manifold::e_faceA;
 		
-		// Search for the polygon normal that is most anti-parallel to the edge normal.
 		int32 bestIndex = 0;
 		float32 bestValue = b2Dot(m_normal, m_polygonB.normals[0]);
 		for (int32 i = 1; i < m_polygonB.count; ++i)
@@ -551,12 +502,10 @@ void b2EPCollider::Collide(b2Manifold* manifold, const b2EdgeShape* edgeA, const
 	rf.sideOffset1 = b2Dot(rf.sideNormal1, rf.v1);
 	rf.sideOffset2 = b2Dot(rf.sideNormal2, rf.v2);
 	
-	// Clip incident edge against extruded edge1 side edges.
 	b2ClipVertex clipPoints1[2];
 	b2ClipVertex clipPoints2[2];
 	int32 np;
 	
-	// Clip to box side 1
 	np = b2ClipSegmentToLine(clipPoints1, ie, rf.sideNormal1, rf.sideOffset1, rf.i1);
 	
 	if (np < b2_maxManifoldPoints)
@@ -564,7 +513,6 @@ void b2EPCollider::Collide(b2Manifold* manifold, const b2EdgeShape* edgeA, const
 		return;
 	}
 	
-	// Clip to negative box side 1
 	np = b2ClipSegmentToLine(clipPoints2, clipPoints1, rf.sideNormal2, rf.sideOffset2, rf.i2);
 	
 	if (np < b2_maxManifoldPoints)
@@ -572,7 +520,6 @@ void b2EPCollider::Collide(b2Manifold* manifold, const b2EdgeShape* edgeA, const
 		return;
 	}
 	
-	// Now clipPoints2 contains the clipped points.
 	if (primaryAxis.type == b2EPAxis::e_edgeA)
 	{
 		manifold->localNormal = rf.normal;
@@ -654,14 +601,12 @@ b2EPAxis b2EPCollider::ComputePolygonSeparation()
 		
 		if (s > m_radius)
 		{
-			// No collision
 			axis.type = b2EPAxis::e_edgeB;
 			axis.index = i;
 			axis.separation = s;
 			return axis;
 		}
 		
-		// Adjacency
 		if (b2Dot(n, perp) >= 0.0f)
 		{
 			if (b2Dot(n - m_upperLimit, m_normal) < -b2_angularSlop)

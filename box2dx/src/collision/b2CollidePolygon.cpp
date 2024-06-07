@@ -1,25 +1,6 @@
-/*
-* Copyright (c) 2006-2009 Erin Catto http://www.box2d.org
-*
-* This software is provided 'as-is', without any express or implied
-* warranty.  In no event will the authors be held liable for any damages
-* arising from the use of this software.
-* Permission is granted to anyone to use this software for any purpose,
-* including commercial applications, and to alter it and redistribute it
-* freely, subject to the following restrictions:
-* 1. The origin of this software must not be misrepresented; you must not
-* claim that you wrote the original software. If you use this software
-* in a product, an acknowledgment in the product documentation would be
-* appreciated but is not required.
-* 2. Altered source versions must be plainly marked as such, and must not be
-* misrepresented as being the original software.
-* 3. This notice may not be removed or altered from any source distribution.
-*/
-
 #include "./b2Collision.h"
 #include "./shapes/b2PolygonShape.h"
 
-// Find the max separation between poly1 and poly2 using edge normals from poly1.
 static float32 b2FindMaxSeparation(int32* edgeIndex,
 								 const b2PolygonShape* poly1, const b2Transform& xf1,
 								 const b2PolygonShape* poly2, const b2Transform& xf2)
@@ -35,11 +16,9 @@ static float32 b2FindMaxSeparation(int32* edgeIndex,
 	float32 maxSeparation = -b2_maxFloat;
 	for (int32 i = 0; i < count1; ++i)
 	{
-		// Get poly1 normal in frame2.
 		b2Vec2 n = b2Mul(xf.q, n1s[i]);
 		b2Vec2 v1 = b2Mul(xf, v1s[i]);
 
-		// Find deepest point for normal i.
 		float32 si = b2_maxFloat;
 		for (int32 j = 0; j < count2; ++j)
 		{
@@ -73,10 +52,8 @@ static void b2FindIncidentEdge(b2ClipVertex c[2],
 
 	b2Assert(0 <= edge1 && edge1 < poly1->m_count);
 
-	// Get the normal of the reference edge in poly2's frame.
 	b2Vec2 normal1 = b2MulT(xf2.q, b2Mul(xf1.q, normals1[edge1]));
 
-	// Find the incident edge on poly2.
 	int32 index = 0;
 	float32 minDot = b2_maxFloat;
 	for (int32 i = 0; i < count2; ++i)
@@ -89,7 +66,6 @@ static void b2FindIncidentEdge(b2ClipVertex c[2],
 		}
 	}
 
-	// Build the clip vertices for the incident edge.
 	int32 i1 = index;
 	int32 i2 = i1 + 1 < count2 ? i1 + 1 : 0;
 
@@ -106,13 +82,6 @@ static void b2FindIncidentEdge(b2ClipVertex c[2],
 	c[1].id.cf.typeB = b2ContactFeature::e_vertex;
 }
 
-// Find edge normal of max separation on A - return if separating axis is found
-// Find edge normal of max separation on B - return if separation axis is found
-// Choose reference edge as min(minA, minB)
-// Find incident edge
-// Clip
-
-// The normal points from 1 to 2
 void b2CollidePolygons(b2Manifold* manifold,
 					  const b2PolygonShape* polyA, const b2Transform& xfA,
 					  const b2PolygonShape* polyB, const b2Transform& xfB)

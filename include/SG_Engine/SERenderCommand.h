@@ -16,20 +16,21 @@ class RenderCommand
 {
 protected:
 	float _globalZOrder;
+
 public:
 	RenderCommand();
 	~RenderCommand();
-	
+
 	float getGlobalZOrder() const { return _globalZOrder; }
-	void setGlobalZOrder(float globalZOrder) { _globalZOrder = globalZOrder;}
-	//一般是进行绘制
-	virtual void execute(Renderer* renderer);
+	void setGlobalZOrder(float globalZOrder) { _globalZOrder = globalZOrder; }
+
+	virtual void execute(Renderer *renderer);
 };
-//-------------------------------------TextureCommand-------------------------------
+
 class TextureCommand : public RenderCommand
 {
 private:
-	Texture* _texture;
+	Texture *_texture;
 	Rect _srcRect;
 	Rect _destRect;
 	float _rotation;
@@ -37,18 +38,19 @@ private:
 	SDL_RendererFlip _flip;
 	Uint8 _opacity;
 	Color3B _colorMod;
+
 public:
 	TextureCommand();
 	~TextureCommand();
 
-	void init(float globalZOrder, Texture* texture, const Rect& srcRect, const Rect& destRect, float rotation,const Point& center, SDL_RendererFlip flip);
-	//透明度
-	void setOpacity(Uint8 opacity) { _opacity = opacity; }
-	void setColorMod(const Color3B& colorMod) { _colorMod = colorMod; }
+	void init(float globalZOrder, Texture *texture, const Rect &srcRect, const Rect &destRect, float rotation, const Point &center, SDL_RendererFlip flip);
 
-	virtual void execute(Renderer* renderer);
+	void setOpacity(Uint8 opacity) { _opacity = opacity; }
+	void setColorMod(const Color3B &colorMod) { _colorMod = colorMod; }
+
+	virtual void execute(Renderer *renderer);
 };
-//-------------------------------------CustomCommand-------------------------------
+
 class CustomCommand : public RenderCommand
 {
 public:
@@ -56,7 +58,7 @@ public:
 	~CustomCommand();
 	void init(float globalZOrder);
 
-	virtual void execute(Renderer* renderer);
+	virtual void execute(Renderer *renderer);
 
 	std::function<void()> func;
 };
