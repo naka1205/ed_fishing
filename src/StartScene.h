@@ -24,6 +24,7 @@ public:
 	bool init();
 	void enterTollgateLayer();
 private:
+	void startBgm();
 	void startGame();
 	void helpGame();
 	void exitGame();

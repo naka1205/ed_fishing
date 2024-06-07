@@ -56,6 +56,11 @@ bool GoldCounter::init(int number)
 		label->setPosition(i*size.width + size.width/2,size.height/2);
 
 		m_labels.push_back(label);
+		
+		this->setAnchorPoint(Point(0.5f, 0.5f));
+		this->setContentSize(Size(50, 30));
+		// this->setVisible(false);
+
 		this->addChild(label);
 	}
 

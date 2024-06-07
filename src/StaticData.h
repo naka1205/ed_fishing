@@ -1,13 +1,13 @@
 #ifndef __StaticData_H__
 #define __StaticData_H__
-#include<map>
-#include<string>
-#include<vector>
-#include<sstream>
-#include<algorithm>
+#include <map>
+#include <string>
+#include <vector>
+#include <sstream>
+#include <algorithm>
 
 #include "SG_Engine.h"
-using namespace std;
+
 using namespace SDL;
 
 class RotateAndSpeed;
@@ -27,121 +27,128 @@ class RotateAndSpeed;
 #define STATIC_FISH_MAX_PER_TIME(id) (StaticData::getInstance()->getMaxPerTimeByFishID(id))
 #define STATIC_FISH_WEIGHT(id) (StaticData::getInstance()->getWeightByFishID(id))
 
-
 typedef struct FishConfig
 {
 	int id;
-	string name;
-	string desc;
+	std::string name;
+	std::string desc;
 	int gold;
 	int weight;
-	int max_per_time;//每次能生成的最大数目
-	int max;//场上最多出现的数目
+	int max_per_time;
+	int max;
 
-	string speedUpName;//加速技能名字
-	string scaredName;//鱼群来临技能
-	string invulnerableName;//无敌技能
+	std::string speedUpName;
+	std::string scaredName;
+	std::string invulnerableName;
+
 public:
 	FishConfig()
-		:id(0),gold(0),weight(0),max_per_time(0),max(0)
-	{}
-}FishConfig;
+			: id(0), gold(0), weight(0), max_per_time(0), max(0)
+	{
+	}
+} FishConfig;
 
 typedef struct FishBornConfig
 {
 	Point pos;
 	int fishID;
+
 public:
-	FishBornConfig(const Point&pos,int id)
-		:pos(pos),fishID(id)
+	FishBornConfig(const Point &pos, int id)
+			: pos(pos), fishID(id)
 	{
 	}
-}FishBornConfig;
+} FishBornConfig;
 
 typedef struct FishTideConfig
 {
 	int count;
 	int path_id;
-	vector<FishBornConfig> fishes;
-}FishTideConfig;
+	std::vector<FishBornConfig> fishes;
+} FishTideConfig;
 
 typedef struct ChestReward
 {
-	string type;//类型
-	int number;//数目
-}ChestReward;
+	std::string type;
+	int number;
+} ChestReward;
 
 typedef struct FishReward
 {
 	int fishID;
-	string type;
+	std::string type;
 	int number;
 	float scope;
+
 public:
-	FishReward(int fishID,const string&type,int number,float scope)
-		:fishID(fishID),type(type),number(number),scope(scope)
+	FishReward(int fishID, const std::string &type, int number, float scope)
+			: fishID(fishID), type(type), number(number), scope(scope)
 	{
 	}
-}FishReward;
+} FishReward;
 
-class StaticData:public Object
+class StaticData : public Object
 {
-	SDL_SYNTHESIZE_READONLY(string,m_staticDataPath,StaticDataPath);//获取静态数据类型
+	SDL_SYNTHESIZE_READONLY(std::string, m_staticDataPath, StaticDataPath);
+
 private:
 	StaticData();
 	~StaticData();
+
 private:
-	static StaticData*m_pInstance;
-	//保存数据字典
+	static StaticData *m_pInstance;
+
 	ValueMap m_plistMap;
-	//鱼的配置信息
-	vector<FishConfig*> m_fishConfigs;
-	//鱼的路径信息
+
+	std::vector<FishConfig *> m_fishConfigs;
+
 	ValueMap m_pathes;
-	//鱼和路径对应的信息
-	map<int,vector<int> > m_fishPathes;
-	//鱼潮的相关信息
-	map<int,FishTideConfig> m_fishTideConfigs;
-	//宝箱奖励相关信息
-	vector<ChestReward> m_chestRewards;
-	//鱼可能掉落的物品集合
-	vector<FishReward> m_fishRewardVec;
+
+	std::map<int, std::vector<int>> m_fishPathes;
+
+	std::map<int, FishTideConfig> m_fishTideConfigs;
+
+	std::vector<ChestReward> m_chestRewards;
+
+	std::vector<FishReward> m_fishRewardVec;
+
 public:
-	static StaticData*getInstance();
+	static StaticData *getInstance();
 	static void purge();
 	bool init();
 
-	Value *getValueForKey(const string&key);
+	Value *getValueForKey(const std::string &key);
 
-	Point getPointForKey(const string&key);
+	Point getPointForKey(const std::string &key);
 
-	FishTideConfig& getFishTideByID(int fishTideID);
+	FishTideConfig &getFishTideByID(int fishTideID);
 
-	RotateAndSpeed*getActionByPathID(int pathID,const Size&size,float offsetX,float randomY,bool reverse);
+	RotateAndSpeed *getActionByPathID(int pathID, const Size &size, float offsetX, float randomY, bool reverse);
 
-	Point getStartPosByPathID(int pathID,bool reverse = false);
+	Point getStartPosByPathID(int pathID, bool reverse = false);
 
-	FishConfig*getFishConfigForID(int id)const;
+	FishConfig *getFishConfigForID(int id) const;
 
-	const vector<int>* getTotalPathes(int fishID)const;
-	//获取鱼所对应的经验值 分数即经验
+	const std::vector<int> *getTotalPathes(int fishID) const;
+
 	float getExpByFishID(int id);
-	//获取鱼所对应的能量值
+
 	float getEnergyByFishID(int id);
-	//根据id获取对应的金币
+
 	int getGoldByFishID(int id);
-	//根据id获取对应的最大出场值
+
 	int getMaxByFishID(int id);
-	//获取一次能产生的最大数目
+
 	int getMaxPerTimeByFishID(int id);
-	//获取权数
+
 	int getWeightByFishID(int id);
-	//获取全部的箱子奖励物品
-	vector<ChestReward>&getChestRewards();
-	vector<FishReward>&getFishRewards();
+
+	std::vector<ChestReward> &getChestRewards();
+	std::vector<FishReward> &getFishRewards();
+
 private:
-	ActionInterval*getAction(const ValueMap&valueMap,const Size&size,float offsetX,float randomY,bool reverse);
-	
+	ActionInterval *getAction(const ValueMap &valueMap, const Size &size, float offsetX, float randomY, bool reverse);
+
 	void parseFishConfig();
 	void parseFishPath();
 	void parseFishTide();

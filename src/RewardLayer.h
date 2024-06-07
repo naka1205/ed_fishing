@@ -8,22 +8,23 @@ using namespace SDL;
 class RewardLayerDelegate
 {
 public:
-	virtual ~RewardLayerDelegate(){}
-	virtual void gameResume()=0;
+	virtual ~RewardLayerDelegate() {}
+	virtual void gameResume() = 0;
 
-	virtual void addItem(const string&itemName,const Point&bornPos,int number)=0;
-	virtual void addChestLightAnim(const string&name,const Point&pos)=0;
-	virtual void removeChestLightAnim(const string&name)=0;
+	virtual void addItem(const std::string &itemName, const Point &bornPos, int number) = 0;
+	virtual void addChestLightAnim(const std::string &name, const Point &pos) = 0;
+	virtual void removeChestLightAnim(const std::string &name) = 0;
 };
 
-class RewardLayer:public Layer
+class RewardLayer : public Layer
 {
 private:
-	Menu*m_pChestMenu;
+	Menu *m_pChestMenu;
 	int m_nChestChgNum;
-	RewardLayerDelegate*m_pDelegate;
-	//是否已经打开了宝箱，为了保证宝箱只能打开一个
+	RewardLayerDelegate *m_pDelegate;
+
 	bool m_bOpenedChest;
+
 public:
 	RewardLayer();
 	~RewardLayer();
@@ -31,15 +32,16 @@ public:
 	bool init();
 
 	void showChest();
-	//当前是否可以点击宝箱，为了避免重复点击不用的宝箱
+
 	bool isClickChest();
-	void setDelegate(RewardLayerDelegate*pDelegate);
+	void setDelegate(RewardLayerDelegate *pDelegate);
+
 private:
-	void chestRewardBtnCallback(Object*sender);
-	void goBtnCallback(Object*sender);
+	void chestRewardBtnCallback(Object *sender);
+	void goBtnCallback(Object *sender);
 	void moveChestSchedule(float);
 
-	ChestReward&getRandomChestReward();
-	Node*getNodeByChestReward(const ChestReward&reward);
+	ChestReward &getRandomChestReward();
+	Node *getNodeByChestReward(const ChestReward &reward);
 };
 #endif

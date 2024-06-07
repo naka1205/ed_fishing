@@ -1,7 +1,7 @@
 #include "ScrollLabel.h"
 
 ScrollLabel::ScrollLabel()
-	: m_nCurIndex(0), m_bDown(true), m_pCurSprite(nullptr), m_pNextSprite(nullptr), m_nTargetIndex(0), m_bUpdated(false), m_speed(0.f)
+		: m_nCurIndex(0), m_bDown(true), m_pCurSprite(nullptr), m_pNextSprite(nullptr), m_nTargetIndex(0), m_bUpdated(false), m_speed(0.f)
 {
 }
 
@@ -109,18 +109,18 @@ void ScrollLabel::setIndex(int index, float duration, bool down)
 
 void ScrollLabel::visit()
 {
-	// Size size = this->getContentSize();
-	// auto pos = this->convertToWorldSpace(Point::ZERO);
+	Size size = this->getContentSize();
+	auto pos = this->convertToWorldSpace(Point::ZERO);
 
-	// SDL_Rect rect = {pos.x,pos.y,size.width,size.height};
+	SDL_Rect rect = {(int)pos.x, (int)pos.y, (int)size.width, (int)size.height};
 
-	// Renderer*renderer = Director::getInstance()->getRenderer();
+	Renderer *renderer = Director::getInstance()->getRenderer();
 
-	// renderer->setClipRect(&rect);
+	renderer->setClipRect(&rect);
 
-	// Node::visit();
+	Node::visit();
 
-	// renderer->setClipRect(nullptr);
+	renderer->setClipRect(nullptr);
 }
 
 void ScrollLabel::update(float dt)

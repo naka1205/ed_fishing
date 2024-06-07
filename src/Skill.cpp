@@ -24,7 +24,7 @@ SkillSpeedUp::SkillSpeedUp(float rate,float duration)
 
 void SkillSpeedUp::skillEnter(Fish*fish)
 {
-	fish->setSpeed(1.3);
+	fish->setSpeed(1.3f);
 	fish->setDuration(this->getDuration());
 }
 
