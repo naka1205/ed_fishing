@@ -49,7 +49,8 @@ bool PanelLayer::init()
 	this->addChild(m_pExpProgress);
 
 	m_pGoldCounter = GoldCounter::create(200);
-	m_pGoldCounter->setPosition(140, 594);
+	m_pGoldCounter->setPosition(240, 605);
+	m_pGoldCounter->setContentSize(Size(200, 30));
 	m_pGoldCounter->scheduleUpdate();
 	this->addChild(m_pGoldCounter);
 

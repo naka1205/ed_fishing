@@ -34,6 +34,7 @@
 #include "SG_Engine/SEEventListenerAllAtOnce.h"
 #include "SG_Engine/SEEventListenerKeyboardState.h"
 #include "SG_Engine/SEEventListenerTextInput.h"
+#include "SG_Engine/SERenderCommand.h"
 
 #include "SG_Engine/SETouch.h"
 #include "SG_Engine/SEMenu.h"
