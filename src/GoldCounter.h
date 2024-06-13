@@ -8,14 +8,11 @@ using namespace std;
 using namespace SDL;
 class ScrollLabel;
 
-class GoldCounter : public Node
+class GoldCounter : public ClipNode
 {
 private:
 	vector<ScrollLabel *> m_labels;
 	int m_nNumber;
-
-	CustomCommand beforeCommand;
-	CustomCommand afterCommand;
 
 public:
 	GoldCounter();
@@ -23,9 +20,7 @@ public:
 	static GoldCounter *create(int number);
 	bool init(int number);
 	virtual void update(float dt);
-	virtual void visit();
-	virtual void beforeVisit();
-	virtual void afterVisit();
+
 
 	void setGoldNumber(int number);
 };

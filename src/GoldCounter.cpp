@@ -73,48 +73,6 @@ void GoldCounter::update(float dt)
 	}
 }
 
-void GoldCounter::visit()
-{
-
-	Renderer *renderer = Director::getInstance()->getRenderer();
-
-	beforeCommand.init(0.f);
-	beforeCommand.func = [this]()
-	{
-		beforeVisit();
-	};
-	renderer->addCommand(&beforeCommand);
-
-	Node::visit();
-
-	afterCommand.init(0.f);
-	afterCommand.func = [this]()
-	{
-		afterVisit();
-	};
-	renderer->addCommand(&afterCommand);
-}
-
-void GoldCounter::beforeVisit()
-{
-	Size size = this->getContentSize();
-	auto pos = this->convertToWorldSpace(Point::ZERO);
-
-	SDL_Rect rect = {(int)pos.x, (int)pos.y, (int)size.width, (int)size.height};
-
-	Renderer *renderer = Director::getInstance()->getRenderer();
-
-	renderer->setClipRect(&rect);
-}
-
-void GoldCounter::afterVisit()
-{
-
-	Renderer *renderer = Director::getInstance()->getRenderer();
-
-	renderer->setClipRect(nullptr);
-}
-
 void GoldCounter::setGoldNumber(int number)
 {
 	// 是增加还是减少

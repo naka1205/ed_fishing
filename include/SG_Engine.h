@@ -14,6 +14,8 @@
 #include "SG_Engine/SEDirector.h"
 #include "SG_Engine/SEScene.h"
 #include "SG_Engine/SELayer.h"
+#include "SG_Engine/SENode.h"
+#include "SG_Engine/SEClipNode.h"
 #include "SG_Engine/SEInputHandler.h"
 #include "SG_Engine/SEEventListenerKeyboard.h"
 #include "SG_Engine/SEActionInstant.h"
