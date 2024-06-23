@@ -5,6 +5,11 @@
 ## 说明
 开发此游戏的目的仅仅是为了学习C++，以及如何使用`SDL2`开发游戏，代码参考CSDN博主[小牛_牛sky](https://github.com/sky94520)。正是由于看到博主参考了`COCOS2D`对SDL2的封装，我决定将游戏移植到网页版，并解决了博主遗留遮罩的问题，新增了裁剪节点 `ClipNode`。
 
+## 游戏
+
+* 捕鱼达人：[https://naka1205.github.io/fishing/](https://naka1205.github.io/fishing/)
+* 单机麻将：[https://naka1205.github.io/mahjong/](https://naka1205.github.io/mahjong/)
+
 ## 游戏界面
 ![开始游戏](./docs/1.jpg "开始游戏")
 ![选择场景](./docs/2.jpg "选择场景")
