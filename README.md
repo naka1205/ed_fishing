@@ -9,7 +9,7 @@
 
 * 捕鱼达人：[https://naka1205.github.io/fishing/](https://naka1205.github.io/fishing/)
 * 单机麻将：[https://naka1205.github.io/mahjong/](https://naka1205.github.io/mahjong/)
-* 仙剑奇侠传：[https://naka1205.github.io/mahjong/](https://naka1205.github.io/pal/)
+* 仙剑奇侠传：[https://naka1205.github.io/pal/](https://naka1205.github.io/pal/)
 * 
 ## 游戏界面
 ![开始游戏](./docs/1.jpg "开始游戏")
